@@ -1,1 +1,1 @@
-[# Horribili-KFT.](https://kiss-csongor.github.io/Horribili-KFT./)https://kiss-csongor.github.io/Horribili-KFT./
+[# Horribili-KFT.](https://kiss-csongor.github.io/Horribili-KFT/)
