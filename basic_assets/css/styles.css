@@ -14,6 +14,8 @@
   --title-color-dark: rgb(255, 255, 255);
   --text-color-dark: rgb(255, 190, 190);
   --container-color-dark: rgb(199, 33, 39);
+  --header-toggle-color: rgb(255, 190, 190);
+  --header-toggle-hidden-color: rgb(199, 33, 39);
   /*========== Font and typography ==========*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 1.5rem;
@@ -69,8 +71,8 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
-  margin-left: 2rem;
-  margin-right: 2rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .section {
@@ -208,7 +210,9 @@ img {
 .header__toggle {
   font-size: 1.15rem;
   cursor: pointer;
-  color: var(--text-color-dark);
+}
+.header-toggle-color {
+  color: var(--header-toggle-color);
 }
 
 /* Change background header */

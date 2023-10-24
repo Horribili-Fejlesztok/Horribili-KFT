@@ -9,6 +9,7 @@ if(headerToggle){
     headerToggle.addEventListener('click', () =>{
         main.classList.add('show-menu')
         main.classList.add('show-menu-border')
+        headerToggle.classList.remove('header-toggle-color')
     })
 }
 
@@ -18,6 +19,7 @@ if(navClose){
     navClose.addEventListener('click', () =>{
         main.classList.remove('show-menu')
         main.classList.remove('show-menu-border')
+        headerToggle.classList.add('header-toggle-color')
     })
 }
 
