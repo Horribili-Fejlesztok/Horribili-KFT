@@ -177,6 +177,8 @@ img {
   position: relative;
   background-color: var(--body-color);
   transition: .4s;
+    /* Ez azért van bent, hogy a header ne takarja el a weboldal tetejét */
+  padding-top: var(--header-height);
 }
 
 .show-menu-border {
