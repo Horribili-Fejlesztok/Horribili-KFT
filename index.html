@@ -13,7 +13,6 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="basic_assets/css/styles.css">
-        <link rel="stylesheet" href="side_assets/index_assets/index.css">
         <title>Horribili KFT.</title>
     </head>
     <body>
@@ -37,37 +36,37 @@
 
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="index.html" class="nav__link active-link">
+                        <a id="start" class="nav__link nav-link active-link" href="#" onclick="$('#mainContainer').load('start.html');">
                             <i class='bx bx-home' ></i> Kezdőlap 
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="products.html" class="nav__link">
+                        <a id="products" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('products.html');">
                             <i class='bx bxs-package'></i> Termékek
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="builder.html" class="nav__link">
+                        <a id="builder" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('builder.html');">
                             <i class='bx bx-chip'></i> Gépösszerakó
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="team.html" class="nav__link">
+                        <a id="team" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('team.html');">
                             <i class='bx bx-group'></i> A csapat
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="company.html" class="nav__link">
+                        <a id="company" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('company.html');">
                             <i class='bx bx-store'></i> A cég
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="testimonials.html" class="nav__link">
+                        <a id="testimonials" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('testimonials.html');">
                             <i class='bx bx-chat'></i> Vásárlói<br>vélemények
                         </a>
                     </li>
                     <li class="nav__item">
-                        <a href="contact.html" class="nav__link">
+                        <a id="contact" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('contact.html');">
                             <i class='bx bxs-contact'></i> Kapcsolat
                         </a>
                     </li>
@@ -92,79 +91,13 @@
                     </a>
                 </nav>
             </header>
-
-            <!--=============== 
-                A sectionon belül kell az adott
-                oldal tartalmát megvalósítani.
-                A menüszalag, ahogy építitek fel az oldalt szépen lassan el fog tűnni
-            ===============-->
-            <!--=============== Kezdőlap ===============-->
-            <section id="home">
-                <div class="greeting">
-                    <h1>Áruházunkban rengeteg neves márka termékei kaphatók</h1>
-                </div>
-                <div id="demo" class="carousel slide" data-ride="carousel">
-
-                    <!-- Indicators -->
-                    <ul class="carousel-indicators">
-                      <li data-target="#demo" data-slide-to="0" class="active"></li>
-                      <li data-target="#demo" data-slide-to="1"></li>
-                      <li data-target="#demo" data-slide-to="2"></li>
-                      <li data-target="#demo" data-slide-to="3"></li>
-                      <li data-target="#demo" data-slide-to="4"></li>
-                      <li data-target="#demo" data-slide-to="5"></li>
-                      <li data-target="#demo" data-slide-to="6"></li>
-                      <li data-target="#demo" data-slide-to="7"></li>
-                      <li data-target="#demo" data-slide-to="8"></li>
-                      <li data-target="#demo" data-slide-to="9"></li>
-                    </ul>
-                    
-                    <!-- The slideshow -->
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="side_assets/index_assets/img/acer.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/amd.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/apple.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/asus.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/dell.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/gigabyte.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/intel.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/nvidia.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/razer.jpg">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="side_assets/index_assets/img/sony.jpg">
-                      </div>
-                    </div>
-                    
-                    <!-- Left and right controls -->
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                      <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                      <span class="carousel-control-next-icon"></span>
-                    </a>
-                  </div>
+            <section id="mainContainer">
+                
             </section>
         </main>
 
         <!--=============== MAIN JS ===============-->
         <script src="basic_assets/js/main.js"></script>
+        <script>$("#mainContainer").load("start.html");</script>
     </body>
 </html>

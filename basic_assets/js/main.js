@@ -1,7 +1,14 @@
 /*=============== SHOW MENU ===============*/
 const headerToggle = document.getElementById('header-toggle'),
       main = document.getElementById('main'),
-      navClose = document.getElementById('nav-close')
+      navClose = document.getElementById('nav-close'),
+      start = document.getElementById('start'),
+      products = document.getElementById('products'),
+      builder = document.getElementById('builder'),
+      team = document.getElementById('team'),
+      company = document.getElementById('company'),
+      testimonials = document.getElementById('testimonials'),
+      contact = document.getElementById('contact')
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
@@ -20,6 +27,90 @@ if(navClose){
         main.classList.remove('show-menu')
         main.classList.remove('show-menu-border')
         headerToggle.classList.add('header-toggle-color')
+    })
+}
+if(start){
+    start.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.add('active-link')
+        products.classList.remove('active-link')
+        builder.classList.remove('active-link')
+        team.classList.remove('active-link')
+        company.classList.remove('active-link')
+        testimonials.classList.remove('active-link')
+        contact.classList.remove('active-link')
+    })
+}
+if(products){
+    products.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.remove('active-link')
+        products.classList.add('active-link')
+        builder.classList.remove('active-link')
+        team.classList.remove('active-link')
+        company.classList.remove('active-link')
+        testimonials.classList.remove('active-link')
+        contact.classList.remove('active-link')
+    })
+}
+if(builder){
+    builder.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.remove('active-link')
+        products.classList.remove('active-link')
+        builder.classList.add('active-link')
+        team.classList.remove('active-link')
+        company.classList.remove('active-link')
+        testimonials.classList.remove('active-link')
+        contact.classList.remove('active-link')
+    })
+}
+if(team){
+    team.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.remove('active-link')
+        products.classList.remove('active-link')
+        builder.classList.remove('active-link')
+        team.classList.add('active-link')
+        company.classList.remove('active-link')
+        testimonials.classList.remove('active-link')
+        contact.classList.remove('active-link')
+    })
+}
+if(company){
+    company.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.remove('active-link')
+        products.classList.remove('active-link')
+        builder.classList.remove('active-link')
+        team.classList.remove('active-link')
+        company.classList.add('active-link')
+        testimonials.classList.remove('active-link')
+        contact.classList.remove('active-link')
+    })
+}
+if(testimonials){
+    testimonials.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.remove('active-link')
+        products.classList.remove('active-link')
+        builder.classList.remove('active-link')
+        team.classList.remove('active-link')
+        company.classList.remove('active-link')
+        testimonials.classList.add('active-link')
+        contact.classList.remove('active-link')
+    })
+}
+if(contact){
+    contact.addEventListener('click', () =>{
+        headerToggle.classList.add('header-toggle-color')
+        start.classList.remove('active-link')
+        products.classList.remove('active-link')
+        builder.classList.remove('active-link')
+        team.classList.remove('active-link')
+        company.classList.remove('active-link')
+        testimonials.classList.remove('active-link')
+        contact.classList.add('active-link')
     })
 }
 
