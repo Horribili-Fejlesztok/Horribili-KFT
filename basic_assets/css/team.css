@@ -1,5 +1,7 @@
-/*=============== A Csapat oldalhoz CSS ===============*/
+/* styles.css importálása, hogy a menü megfelelően jelenjen meg */
+@import url('/basic_assets/css/styles.css');
 
+/*=============== A Csapat oldalhoz CSS ===============*/
 h2 {
     text-align: center;
     padding: 20px;
