@@ -125,6 +125,9 @@ function linkAction(){
         main.classList.remove('show-menu')
         main.classList.remove('show-menu-border')
     }
+    else {
+        headerToggle.classList.remove('header-toggle-color') 
+    }
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
