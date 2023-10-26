@@ -23,8 +23,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 1100px;
-    background-color: rgb(199, 33, 39);
+    height: 100%;
+    background-color: rgb(255, 223, 223);
 }
 
 p {
@@ -34,7 +34,7 @@ p {
 
 .oldal-cim {
     text-align: center;
-    padding: 15px;
-    border-top: #000000 50px;
+    padding: 20px;
     background-color: rgb(255, 190, 190);
+    width: 100%;
 }

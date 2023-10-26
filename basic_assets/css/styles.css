@@ -86,7 +86,7 @@ img {
 /*=============== HEADER Y NAV ===============*/
 .nav {
   background-color: var(--container-color-dark);
-  padding-top: 2rem;
+  padding-top: 1rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -177,6 +177,8 @@ img {
   position: relative;
   background-color: var(--body-color);
   transition: .4s;
+    /* Ez azért van bent, hogy a header ne takarja el a weboldal tetejét */
+  padding-top: var(--header-height);
 }
 
 .show-menu-border {
@@ -226,9 +228,64 @@ img {
 }
 
 /*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 200px) {
+  .show-menu {
+    transform: translate(67%);
+  }
+}
+@media screen and (min-width: 225px) {
+  .show-menu {
+    transform: translate(65%);
+  }
+}
+@media screen and (min-width: 250px) {
+  .show-menu {
+    transform: translate(63.5%);
+  }
+}
+@media screen and (min-width: 275px) {
+  .show-menu {
+    transform: translate(62%);
+  }
+}
+@media screen and (min-width: 300px) {
+  .show-menu {
+    transform: translate(60.5%);
+  }
+}
+@media screen and (min-width: 325px) {
+  .show-menu {
+    transform: translate(58.5%);
+  }
+}
+@media screen and (min-width: 350px) {
+  .show-menu {
+    transform: translate(56%);
+  }
+}
+@media screen and (min-width: 375px) {
+  .show-menu {
+    transform: translate(54.5%);
+  }
+}
 @media screen and (min-width: 400px) {
   .show-menu {
-    transform: translate(48%);
+    transform: translate(52.5%);
+  }
+}
+@media screen and (min-width: 425px) {
+  .show-menu {
+    transform: translate(50.5%);
+  }
+}
+@media screen and (min-width: 450px) {
+  .show-menu {
+    transform: translate(49%);
+  }
+}
+@media screen and (min-width: 475px) {
+  .show-menu {
+    transform: translate(47.5%);
   }
 }
 @media screen and (min-width: 500px) {
