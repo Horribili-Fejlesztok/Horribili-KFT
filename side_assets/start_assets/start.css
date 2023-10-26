@@ -1,8 +1,10 @@
+/* styles.css importálása, hogy a menü megfelelően jelenjen meg */
+@import url('/basic_assets/css/styles.css');
+
 .carousel-inner img {
     width: 100%;
     height: 850px;
   }
 .greeting h1 {
     text-align: center;
-    text
 }
