@@ -4,7 +4,7 @@ const headerToggle = document.getElementById('header-toggle'),
       navClose = document.getElementById('nav-close'),
       start = document.getElementById('start'),
       products = document.getElementById('products'),
-      builder = document.getElementById('builder'),
+      services = document.getElementById('services'),
       team = document.getElementById('team'),
       company = document.getElementById('company'),
       testimonials = document.getElementById('testimonials'),
@@ -34,7 +34,7 @@ if(start){
         headerToggle.classList.add('header-toggle-color')
         start.classList.add('active-link')
         products.classList.remove('active-link')
-        builder.classList.remove('active-link')
+        services.classList.remove('active-link')
         team.classList.remove('active-link')
         company.classList.remove('active-link')
         testimonials.classList.remove('active-link')
@@ -46,19 +46,19 @@ if(products){
         headerToggle.classList.add('header-toggle-color')
         start.classList.remove('active-link')
         products.classList.add('active-link')
-        builder.classList.remove('active-link')
+        services.classList.remove('active-link')
         team.classList.remove('active-link')
         company.classList.remove('active-link')
         testimonials.classList.remove('active-link')
         contact.classList.remove('active-link')
     })
 }
-if(builder){
-    builder.addEventListener('click', () =>{
+if(services){
+    services.addEventListener('click', () =>{
         headerToggle.classList.add('header-toggle-color')
         start.classList.remove('active-link')
         products.classList.remove('active-link')
-        builder.classList.add('active-link')
+        services.classList.add('active-link')
         team.classList.remove('active-link')
         company.classList.remove('active-link')
         testimonials.classList.remove('active-link')
@@ -70,7 +70,7 @@ if(team){
         headerToggle.classList.add('header-toggle-color')
         start.classList.remove('active-link')
         products.classList.remove('active-link')
-        builder.classList.remove('active-link')
+        services.classList.remove('active-link')
         team.classList.add('active-link')
         company.classList.remove('active-link')
         testimonials.classList.remove('active-link')
@@ -82,7 +82,7 @@ if(company){
         headerToggle.classList.add('header-toggle-color')
         start.classList.remove('active-link')
         products.classList.remove('active-link')
-        builder.classList.remove('active-link')
+        services.classList.remove('active-link')
         team.classList.remove('active-link')
         company.classList.add('active-link')
         testimonials.classList.remove('active-link')
@@ -94,7 +94,7 @@ if(testimonials){
         headerToggle.classList.add('header-toggle-color')
         start.classList.remove('active-link')
         products.classList.remove('active-link')
-        builder.classList.remove('active-link')
+        services.classList.remove('active-link')
         team.classList.remove('active-link')
         company.classList.remove('active-link')
         testimonials.classList.add('active-link')
@@ -106,7 +106,7 @@ if(contact){
         headerToggle.classList.add('header-toggle-color')
         start.classList.remove('active-link')
         products.classList.remove('active-link')
-        builder.classList.remove('active-link')
+        services.classList.remove('active-link')
         team.classList.remove('active-link')
         company.classList.remove('active-link')
         testimonials.classList.remove('active-link')
@@ -119,9 +119,12 @@ const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
     const main = document.getElementById('main')
+    var screenWidth = window.matchMedia("(max-width: 750px)")
     // When we click on each nav__link, we remove the show-menu class
-    main.classList.remove('show-menu')
-    main.classList.remove('show-menu-border')
+    if (screenWidth.matches) {
+        main.classList.remove('show-menu')
+        main.classList.remove('show-menu-border')
+    }
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
