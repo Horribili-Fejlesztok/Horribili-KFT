@@ -1,105 +1,112 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
 
-        <!--=============== BOXICONS ===============-->
-        <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <!--=============== BOOTSTRAP ===============-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <!--=============== CSS ===============-->
-        <link rel="stylesheet" href="basic_assets/css/styles.css">
-        <title>Horribili KFT.</title>
-    </head>
-    <body>
-        <!--=============== NAV ===============-->
-        <nav class="nav" id="nav">
-            <div class="nav__menu container_css" id="nav-menu">
-                <div class="nav__shape"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <div class="nav__close" id="nav-close">
-                    <i class='bx bx-x'></i>
+    <!--=============== BOXICONS ===============-->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <!--=============== BOOTSTRAP ===============-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="basic_assets/css/styles.css">
+    <!--=============== JS ===============-->
+    <script src="basic_assets/js/main.js"></script>
+
+    <title>Horribili KFT.</title>
+</head>
+
+<body>
+    <!--=============== Fejléc ===============-->
+    <header class="header" id="header">
+        <nav class="header__nav container_css">
+
+            <!-- Menüszalag gombja -->
+            <div class="header__toggle header-toggle-color" id="menu-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- Logó -->
+            <div style="margin:auto">
+                <a href="index.html" class="header__logo">
+                    <img src="basic_assets/img/logo.png" class="nav__img">
+                </a>
+            </div>
+
+        </nav>
+    </header>
+
+    <!--=============== NAV ===============-->
+    <nav class="nav" id="menu">
+        <div class="nav__menu container_css" id="nav-menu">
+            <div class="nav__shape"></div>
+
+            <div class="nav__close" id="nav-close">
+                <i class='bx bx-x'></i>
+            </div>
+
+            <div class="nav__data">
+                <span class="nav__greeting" style="margin-bottom: 5px;">Köszöntünk a</span>
+                <div>
+                    <img src="basic_assets/img/logo.png" class="nav__img">
                 </div>
-                
-                <div class="nav__data">
+                <span class="nav__greeting" style="margin-top: 5px;">elektronikai áruház oldalán!</span>
+            </div>
 
-                    <span class="nav__greeting" style="margin-bottom: 5px;">Köszöntünk a</span>
-                    <div>
-                        <img src="basic_assets/img/logo.png" class="nav__img">
-                    </div>
-                    <span class="nav__greeting" style="margin-top: 5px;">elektronikai áruház oldalán!</span>
-                </div>
 
+            <div id="menu">
                 <ul class="nav__list">
-                    <li class="nav__item">
-                        <a id="start" class="nav__link nav-link active-link" href="#" onclick="$('#mainContainer').load('start.html');">
-                            <i class='bx bx-home' ></i> Kezdőlap 
+                    <li>
+                        <a href="start.html" class="nav__link">
+                            <i class='bx bx-home'></i> Kezdőlap
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a id="products" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('products.html');">
+                    <li>
+                        <a href="products.html" class="nav__link">
                             <i class='bx bxs-package'></i> Termékek
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a id="services" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('services.html');">
+                    <li>
+                        <a href="services.html" class="nav__link">
                             <i class='bx bx-chip'></i> Szolgáltatások
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a id="team" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('team.html');">
+                    <li>
+                        <a href="team.html" class="nav__link">
                             <i class='bx bx-group'></i> A csapat
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a id="company" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('company.html');">
+                    <li>
+                        <a href="company.html" class="nav__link">
                             <i class='bx bx-store'></i> A cég
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a id="testimonials" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('testimonials.html');">
+                    <li>
+                        <a href="testimonials.html" class="nav__link">
                             <i class='bx bx-chat'></i> Vásárlói<br>vélemények
                         </a>
                     </li>
-                    <li class="nav__item">
-                        <a id="contact" class="nav__link nav-link" href="#" onclick="$('#mainContainer').load('contact.html');">
+                    <li>
+                        <a href="contact.html" class="nav__link">
                             <i class='bx bxs-contact'></i> Kapcsolat
                         </a>
                     </li>
                 </ul>
             </div>
-        </nav>
+            <button id="close-menu">Close Menu</button>
+        </div>
+    </nav>
 
-        <!--=============== Tartalom ===============-->
-        <main class="main" id="main">
-            <!--=============== Fejléc ===============-->
-            <header class="header" id="header">
-                <nav class="header__nav container_css">
-                    <!-- Menüszalag gombja -->
-                    <div class="header__toggle header-toggle-color" id="header-toggle">
-                        <i class='bx bx-menu'></i>
-                    </div>
-                    <!-- Logó -->
-                    <div style="margin:auto">
-                    <a href="index.html" class="header__logo">
-                        <div>
-                            <img src="basic_assets/img/logo.png" class="nav__img">
-                        </div>
-                    </a>
-                    </div>
-                </nav>
-            </header>
-            <section id="mainContainer">
-                
-            </section>
-        </main>
+    <!--=============== Tartalom ===============-->
+    <section id="content" class="main">
+    </section>
 
-        <!--=============== MAIN JS ===============-->
-        <script src="basic_assets/js/main.js"></script>
-        <script>$("#mainContainer").load("start.html");</script>
-    </body>
+</body>
+
 </html>
