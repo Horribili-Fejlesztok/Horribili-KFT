@@ -1,40 +1,40 @@
 /* styles.css importálása, hogy a menü megfelelően jelenjen meg */
-@import url('/basic_assets/css/styles.css');
+@import url("/basic_assets/css/styles.css");
 
 /*=============== A Csapat oldalhoz CSS ===============*/
 h2 {
-    text-align: center;
-    padding: 20px;
-    border-top: #000000 50px;
-    background-color: rgb(236, 149, 149);
-    margin: 0;
+  text-align: center;
+  padding: 20px;
+  border-top: #000000 50px;
+  background-color: rgb(236, 149, 149);
+  margin: 0;
 }
 
 .csapat-tag {
-    background-color: rgb(236, 149, 149);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 20px;
-    height: 600px;
-    width: 500px;
+  background-color: rgb(236, 149, 149);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  height: 600px;
+  width: 500px;
 }
 
 .csapat-tagok {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    height: 100%;
-    background-color: rgb(255, 223, 223);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
+  background-color: rgb(255, 223, 223);
 }
 
 p {
-    text-align: center;
-    color: #ffffff;
+  text-align: center;
+  color: #ffffff;
 }
 
 .oldal-cim {
-    text-align: center;
-    padding: 20px;
-    background-color: rgb(255, 190, 190);
-    width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(255, 190, 190);
+  width: 100%;
 }
