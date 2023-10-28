@@ -1,0 +1,31 @@
+.card-img-top {
+    height: calc(10vw + 15rem);
+    width: 100%;
+    filter: brightness(0.75);
+    object-fit: cover;
+    margin: auto;
+    border: 10px;
+    overflow: hidden;
+    transition-duration: 500ms;
+}
+.card-img-top:hover{
+    transition-duration: 500ms;
+    
+    object-fit: contain;
+    filter:brightness(1.0);
+    transform: scale(1.1);
+}
+
+.top-secret{
+    filter: blur(10px) brightness(0.3);
+    transition-duration: 500ms;
+}
+
+.top-secret:hover{
+    filter: blur(0px);
+    transition-duration: 500ms;
+}
+
+.network-card {
+    width: 300px;
+}
