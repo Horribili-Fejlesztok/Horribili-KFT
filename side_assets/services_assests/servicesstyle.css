@@ -1,0 +1,69 @@
+.card{
+    margin-bottom: 20px;
+}
+
+h4{
+    text-align: center;
+    color: rgb(199, 33, 39);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+ h1{
+    font-size: min(11vw, 80px);
+}
+
+.card-text{
+    text-align: justify;
+}
+
+.container-fluid{
+    width: 90%;
+}
+.card-img-top {
+    padding: 1%;
+    height: calc(10vw + 15rem);
+    width: 100%;
+    filter: brightness(0.75);
+    object-fit: cover;
+    margin: auto;
+    border: 10px;
+    overflow: hidden;
+    transition-duration: 500ms;
+}
+
+.card-img-top:active,
+.card-img-top:hover{
+    transition-duration: 500ms;
+    filter:brightness(1.0);
+    transform: scale(1.1);
+}
+
+.top-secret{
+    filter: blur(40px) brightness(0.3);
+    transition-duration: 500ms;
+}
+
+.top-secret:active,
+.top-secret:hover{
+    filter: blur(7px);
+    transition-duration: 500ms;
+}
+
+.network-card {
+    width: 300px;
+}
+
+.jumbotext{
+    font-size: 20px;
+}
+
+.btn-green{
+    background-color: #8CC83C;
+    color: white;
+}
+
+.btn-green:hover{
+    background-color: #a0e646;
+    color: white;
+}
