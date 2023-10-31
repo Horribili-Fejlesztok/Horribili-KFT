@@ -49,3 +49,13 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 });
+
+function loadServices() {
+    var content = document.getElementById('content')
+    $(content).load("services.html");
+}
+
+function loadCompany() {
+    var content = document.getElementById('content')
+    $(content).load("company.html");
+}
