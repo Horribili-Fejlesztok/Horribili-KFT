@@ -248,3 +248,23 @@ img {
   color: var(--title-color-dark);
 }
 
+footer{
+  z-index: var(--z-fixed)
+}
+
+.jumbotext {
+  font-size: 20px;
+}
+
+.jumbotron{
+  text-align: center;
+  padding-top: 30px;
+  background-color: rgb(255, 223, 223);
+  width: 100%;
+  margin-bottom: 50px;
+
+}
+
+.jumbotron > h1{
+  font-size: min(11vw, 80px)
+}
