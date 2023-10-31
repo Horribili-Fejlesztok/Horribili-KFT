@@ -9,8 +9,8 @@ h4{
     font-size: 30px;
 }
 
-h1{
-    font-size: 5rem;
+ h1{
+    font-size: min(11vw, 80px);
 }
 
 .card-text{
@@ -31,6 +31,8 @@ h1{
     overflow: hidden;
     transition-duration: 500ms;
 }
+
+.card-img-top:active,
 .card-img-top:hover{
     transition-duration: 500ms;
     filter:brightness(1.0);
@@ -42,6 +44,7 @@ h1{
     transition-duration: 500ms;
 }
 
+.top-secret:active,
 .top-secret:hover{
     filter: blur(7px);
     transition-duration: 500ms;
