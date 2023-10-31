@@ -96,7 +96,7 @@ img {
   background-color: #333;
   color: #fff;
   transition: left 0.3s;
-  z-index: 2;
+  z-index: 99;
 }
 
 #close-menu {
