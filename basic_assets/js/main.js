@@ -1,137 +1,51 @@
-/*=============== SHOW MENU ===============*/
-const headerToggle = document.getElementById('header-toggle'),
-      main = document.getElementById('main'),
-      navClose = document.getElementById('nav-close'),
-      start = document.getElementById('start'),
-      products = document.getElementById('products'),
-      services = document.getElementById('services'),
-      team = document.getElementById('team'),
-      company = document.getElementById('company'),
-      testimonials = document.getElementById('testimonials'),
-      contact = document.getElementById('contact')
+$(document).ready(function () {
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(headerToggle){
-    headerToggle.addEventListener('click', () =>{
-        main.classList.add('show-menu')
-        main.classList.add('show-menu-border')
-        headerToggle.classList.remove('header-toggle-color')
-    })
-}
+    //MENU TOGGLE
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        main.classList.remove('show-menu')
-        main.classList.remove('show-menu-border')
-        headerToggle.classList.add('header-toggle-color')
-    })
-}
-if(start){
-    start.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.add('active-link')
-        products.classList.remove('active-link')
-        services.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(products){
-    products.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.add('active-link')
-        services.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(services){
-    services.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        services.classList.add('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(team){
-    team.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        services.classList.remove('active-link')
-        team.classList.add('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(company){
-    company.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        services.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.add('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(testimonials){
-    testimonials.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        services.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.add('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(contact){
-    contact.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        services.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.add('active-link')
-    })
-}
+    var $menu = $('#menu');
+    var $menuToggle = $('#menu-toggle');
+    var $closeMenu = $('#close-menu');
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+    // Toggle the menu by adjusting the left property
+    $menuToggle.click(function () {
+        if ($menu.css('left') === '0px' || $menu.css('left') === '0') {
+            $menu.css('left', '-250px');
+        } else {
+            $menu.css('left', '0');
+        }
+    });
 
-function linkAction(){
-    const main = document.getElementById('main')
-    var screenWidth = window.matchMedia("(max-width: 750px)")
-    // When we click on each nav__link, we remove the show-menu class
-    if (screenWidth.matches) {
-        main.classList.remove('show-menu')
-        main.classList.remove('show-menu-border')
-    }
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+    //PAGE LOADING (into the container)
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+    // Load the given content by default when the page loads
+    $("#content").load("start.html");
+
+    // Handle clicks on menu links
+    $("#menu ul li a").click(function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+
+        var pageToLoad = $(this).attr("href"); // Get the href attribute of the clicked link
+        // MENU AUTO-CLOSE
+        // Check the screen width and close the menu if it's a small device
+        if (window.innerWidth <= 768) { // You can adjust this breakpoint as needed
+            $menu.css('left', '-250px');
+        }
+
+        // Load the content of the selected page into the "content" div
+        $("#content").load(pageToLoad);
+    });
+
+
+    //MENU CLOSE WHEN CLICKED OUTSIDE OF
+    // Close the menu when clicking outside of it
+    $(document).on('click', function (e) {
+        if ($menu.css('left') === '0px' && !$(e.target).closest('#menu').length) {
+            $menu.css('left', '-250px');
+        }
+    });
+
+    // Prevent the menu from closing when clicking inside the menu
+    $menu.on('click', function (e) {
+        e.stopPropagation();
+    });
+});
