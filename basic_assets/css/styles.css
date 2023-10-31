@@ -166,6 +166,7 @@ img {
 .nav__list {
   display: flex;
   flex-direction: column;
+  /*A linkek közötti távolság*/
   row-gap: 1.5rem;
 }
 
@@ -185,6 +186,7 @@ img {
 
 .nav__link:hover {
   color: var(--title-color-dark);
+  text-decoration: none;
 }
 
 .main {
