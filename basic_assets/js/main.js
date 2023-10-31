@@ -58,17 +58,15 @@ $(document).ready(function () {
         loadPage(clickedPage);
     });
 
-    // pageload még nem működik 
-    // !!!IMPORTANT!!! give the id pagelink (id="pagelink") to any links 
-    // that open something on this page
-    $(".pagelink").click(function (e) {
-        // Prevent the default link behavior
+
+    // !!!IMPORTANT!!! give the class "pagelink" (class="pagelink") to any link
+    // that opens something that is related to the Horribli webpage
+    // I don't know what this voodoo is but it works. Thanks ChatGPT
+    $(document).on('click', '.pagelink', function (e) {
         e.preventDefault();
-        var clickedPage = $(this).attr("href");
+        var clickedPage = $(this).attr('href');
         loadPage(clickedPage);
     });
-
-
 
     // MENU CLOSE
     // Close the menu when clicking outside of it
