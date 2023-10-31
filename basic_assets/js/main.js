@@ -15,7 +15,6 @@ $(document).ready(function () {
         }
     });
 
-
     //PAGE LOADING (into the container)
 
     // Load the given content by default when the page loads
