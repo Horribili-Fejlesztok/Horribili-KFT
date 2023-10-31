@@ -25,10 +25,11 @@ h4{
     width: 100%;
 }
 
-.aboutus > p{
-    font-size: larger;
-}
 
 .row{
     padding-bottom: 40px;
+}
+
+.container-fluid {
+    width: 90%;
 }
