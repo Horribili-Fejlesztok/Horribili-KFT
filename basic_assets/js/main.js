@@ -81,13 +81,3 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 });
-
-function bgAdd() {
-    var mainContainer = document.getElementById("content");
-    mainContainer.classList.add('main-bg-color')
-}
-
-function bgRemove() {
-    var mainContainer = document.getElementById("content");
-    mainContainer.classList.remove('main-bg-color')
-}

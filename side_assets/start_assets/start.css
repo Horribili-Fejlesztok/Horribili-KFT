@@ -130,3 +130,8 @@ body {
 		margin-bottom: 30px;
 	}
 }
+
+#content {
+	background-color: unset;
+	padding-top: unset;
+}
