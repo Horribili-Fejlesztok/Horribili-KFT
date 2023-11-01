@@ -11,6 +11,7 @@ h4 {
 
 .card-text {
     text-align: justify;
+    color: #333;
 }
 
 .container-fluid {
@@ -56,4 +57,47 @@ h4 {
 .btn-green:hover {
     background-color: #a0e646;
     color: white;
+}
+
+.characteristics {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.characteristic {
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    padding-bottom: 20px;
+}
+
+.characteristic i {
+    font-size: min(40px, 6vw);
+    color: rgb(199, 33, 39);
+}
+
+.characteristic h3 {
+    color: rgb(199, 33, 39);
+
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.characteristic p {
+    font-size: 15px;
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ul li {
+    text-indent: -1em;
+    padding-left: 1em;
+    color: #333;
 }
