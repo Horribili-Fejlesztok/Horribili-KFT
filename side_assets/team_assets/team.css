@@ -1,0 +1,55 @@
+/* styles.css importálása, hogy a menü megfelelően jelenjen meg */
+@import url("/basic_assets/css/styles.css");
+
+/*=============== A Csapat oldalhoz CSS ===============*/
+h2 {
+  text-align: center;
+  padding: 20px;
+  border-top: #000000 50px;
+  margin: 0;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.csapat-tag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(255, 223, 223);
+  padding: 20px;
+  text-align: center;
+  height: 450px;
+  border: 30px solid transparent;
+}
+
+.csapat-tag img {
+  max-height: 80%;
+  height: auto;
+  width: auto;
+}
+
+p {
+  text-align: center;
+  color: rgb(246, 131, 131);
+}
+
+.oldal-cim {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(255, 223, 223);
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
+.img-equal {
+  height: 100%; /* Set a fixed height to make all images the same height */
+  width: auto; /* Maintain the aspect ratio */
+}
+
+#alcim {
+  font-size: 20px;
+  color: rgb(246, 131, 131);
+}

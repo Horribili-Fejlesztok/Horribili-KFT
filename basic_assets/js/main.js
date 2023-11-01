@@ -1,134 +1,83 @@
-/*=============== SHOW MENU ===============*/
-const headerToggle = document.getElementById('header-toggle'),
-      main = document.getElementById('main'),
-      navClose = document.getElementById('nav-close'),
-      start = document.getElementById('start'),
-      products = document.getElementById('products'),
-      builder = document.getElementById('builder'),
-      team = document.getElementById('team'),
-      company = document.getElementById('company'),
-      testimonials = document.getElementById('testimonials'),
-      contact = document.getElementById('contact')
+$(document).ready(function () {
 
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(headerToggle){
-    headerToggle.addEventListener('click', () =>{
-        main.classList.add('show-menu')
-        main.classList.add('show-menu-border')
-        headerToggle.classList.remove('header-toggle-color')
-    })
-}
+    //MENU BUTTON (TOGGLE)
 
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        main.classList.remove('show-menu')
-        main.classList.remove('show-menu-border')
-        headerToggle.classList.add('header-toggle-color')
-    })
-}
-if(start){
-    start.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.add('active-link')
-        products.classList.remove('active-link')
-        builder.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(products){
-    products.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.add('active-link')
-        builder.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(builder){
-    builder.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        builder.classList.add('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(team){
-    team.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        builder.classList.remove('active-link')
-        team.classList.add('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(company){
-    company.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        builder.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.add('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(testimonials){
-    testimonials.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        builder.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.add('active-link')
-        contact.classList.remove('active-link')
-    })
-}
-if(contact){
-    contact.addEventListener('click', () =>{
-        headerToggle.classList.add('header-toggle-color')
-        start.classList.remove('active-link')
-        products.classList.remove('active-link')
-        builder.classList.remove('active-link')
-        team.classList.remove('active-link')
-        company.classList.remove('active-link')
-        testimonials.classList.remove('active-link')
-        contact.classList.add('active-link')
-    })
-}
+    var $menu = $('#menu');
+    var $menuToggle = $('#menu-toggle');
+    var $closeMenu = $('#close-menu');
 
-/*=============== REMOVE MENU MOBILE ===============*/
-const navLink = document.querySelectorAll('.nav__link')
+    // Toggle the menu by adjusting the 'left' property (basically changing the position of the menu on and off screen)
+    $menuToggle.click(function () {
+        // Close if open
+        if ($menu.css('left') === '0px' || $menu.css('left') === '0') {
+            $menu.css('left', '-250px');
+        }
+        // Open if closed 
+        else {
+            $menu.css('left', '0');
+        }
+    });
 
-function linkAction(){
-    const main = document.getElementById('main')
-    // When we click on each nav__link, we remove the show-menu class
-    main.classList.remove('show-menu')
-    main.classList.remove('show-menu-border')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
+    // PAGE LOADING (into the container)
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-function scrollHeader(){
-    const header = document.getElementById('header')
-    // When the scroll is greater than 50 viewport height, add the scroll-header class to the header tag
-    if(this.scrollY >= 50) header.classList.add('scroll-header'); else header.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
+    function loadPage(pageToLoad) {
+        // loadPage function, loads the page given to it as a parameter (ex for parameter: team.html)
+
+        // First, store the page that was clicked as the last loaded page
+        localStorage.setItem('lastLoadedPage', pageToLoad);
+
+        // Second, load the page itself (loads the page into the content div dynamically)
+        $("#content").load(pageToLoad);
+
+        // (Mobile compatiblity) Third, close the menu if the device viewport is small (Menu auto close)
+        if (window.innerWidth <= 768) {
+            $menu.css('left', '-250px');
+        }
+    }
+
+    // RESTORE SESSION
+    // Load the last loaded page, if there is one
+    var lastLoadedPage = localStorage.getItem('lastLoadedPage');
+
+    // Check if there is a last loaded page, if yes load it
+    if (lastLoadedPage) {
+        loadPage(lastLoadedPage);
+
+        // If no, load the default page
+    } else {
+        loadPage("start.html");
+    }
+
+    // LINKS HANDLING (Menu and other)
+
+    // Handle clicks on menu links
+    $("#menu ul li a").click(function (e) {
+        // Prevent the default link behavior
+        e.preventDefault();
+        var clickedPage = $(this).attr("href");
+        loadPage(clickedPage);
+    });
+
+
+    // !!!IMPORTANT!!! give the class "pagelink" (class="pagelink") to any link
+    // that opens something that is related to the Horribli webpage
+    // I don't know what this voodoo is but it works. Thanks ChatGPT
+    $(document).on('click', '.pagelink', function (e) {
+        e.preventDefault();
+        var clickedPage = $(this).attr('href');
+        loadPage(clickedPage);
+    });
+
+    // MENU CLOSE
+    // Close the menu when clicking outside of it
+    $(document).on('click', function (e) {
+        if ($menu.css('left') === '0px' && !$(e.target).closest('#menu').length) {
+            $menu.css('left', '-250px');
+        }
+    });
+
+    // Prevent the menu from closing when clicking inside the menu
+    $menu.on('click', function (e) {
+        e.stopPropagation();
+    });
+});
