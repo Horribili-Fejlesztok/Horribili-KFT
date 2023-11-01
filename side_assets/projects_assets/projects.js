@@ -12,3 +12,17 @@ function toggleVideki() {
     nyit_videki.style.display = "block";
   }
 }
+function toggleESA() {
+  var p_esa = document.getElementById("p_esa");
+  var nyit_esa = document.getElementById("nyit_esa");
+  var zar_esa = document.getElementById("zar_esa");
+  if (p_esa.style.display === "none" || p_esa.style.display === "") {
+    p_esa.style.display = "block";
+    zar_esa.style.display = "block";
+    nyit_esa.style.display = "none"; 
+  } else {
+    p_esa.style.display = "none";
+    zar_esa.style.display = "none";
+    nyit_esa.style.display = "block";
+  }
+}

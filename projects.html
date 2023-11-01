@@ -21,10 +21,7 @@
     <div class="bg"></div>
     <div class="bg bg2"></div>
     <div class="bg bg3"></div>
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-    >
+    <div id="carouselExampleIndicators" class="carousel slide">
       <div class="carousel-indicators">
         <button
           type="button"
@@ -32,25 +29,25 @@
           data-bs-slide-to="0"
           class="active"
           aria-current="true"
-          aria-label="Vidéki Büfé"
+          aria-label="Slide1"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="1"
-          aria-label="Kivitelezés"
+          aria-label="Slide2"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="2"
-          aria-label="Megvalósítás"
+          aria-label="Slide3"
         ></button>
         <button
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="3"
-          aria-label="Karbantartás"
+          aria-label="Slide4"
         ></button>
       </div>
       <div class="carousel-inner">
@@ -85,11 +82,11 @@
               törzsvendégek. Ennek a tervnek a részeként valósítottuk meg a büfé
               modernizált, NAV mentes és adócsaló rendszerrel ellátott hálózatát
               mi, az adóellenőröket is elrettentő Horribili KFT. A projekt
-              végeztével kialakult egy olyan hely Győr szívében, ahol a bürokrácia és a
-              bodultsággal teli örömteli hangulat még a természetben lévő
-              szimbiózist is megszégyenítő módon egyesülni tud. Ez az közeg ihlette meg a
-              büfé legújabb, hamar nagy népszerűségre szert tevő ételét, a
-              "káosz-gulyást".
+              végeztével kialakult egy olyan hely Győr szívében, ahol a
+              bürokrácia és a bodultsággal teli örömteli hangulat még a
+              természetben lévő szimbiózist is megszégyenítő módon egyesülni
+              tud. Ez az közeg ihlette meg a büfé legújabb, hamar nagy
+              népszerűségre szert tevő ételét, a "káosz-gulyást".
             </p>
             <button
               id="zar_videki"
@@ -103,48 +100,58 @@
         </div>
         <div class="carousel-item">
           <img
-            src="side_assets/start_assets/img/execution.jpg"
-            class="d-block w-100"
-          />
-          <div class="carousel-caption">
-            <h5></h5>
-            <button onclick="" class="btn bg-success mt-3 text-light">
-              Olvasson tovább
-            </button>
-            <p></p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
             src="side_assets/projects_assets/img/esa.jpg"
             class="d-block w-100"
           />
           <div class="carousel-caption">
             <h5>Európai Űrügynükség</h5>
-            <p>
-              Eddigi legnívósabb nagy hálózati projektünket az Európai
-              Űrügynükség földönkívüliekkel foglalkozó ágazatának valósítottuk
-              meg.
+            <button
+              id="nyit_esa"
+              onclick="toggleESA()"
+              class="btn bg-success mt-3 text-light"
+              style="display: block; margin: auto"
+            >
+              Olvasson tovább
+            </button>
+            <p
+              id="p_esa"
+              style="display: none; margin: auto; text-align: justify"
+            >
+              Legnívósabb nagy hálózati projektünket az Európai Űrügynükségnek
+              valósítottuk meg, amely mögött egy sci-fi filmbe illő történet
+              húzódik. 2010-ben az a hír járta körbe egész Európát, hogy Pataky
+              Attilát elrabolták az UFO-k, ez pedig az Eurúpai Űrügynökség
+              fantáziáját is megmozgatta. Arra az elhatározásra jutottak, hogy
+              egy teljesen új ágazat kialakításába fognak bele, melyet "Pataky
+              Attila Intergalaktikus Diplomáciai Központ" névvel ihlettek. A
+              tervbe a híres magyar rockzenészt is belevonták, aki átélte ezeket
+              az emberi elmével szinte felfoghatatlan eseményeket. Az új
+              ágazatnak egy olyan hálózatra volt szüksége, amely összeköti
+              Pataky Attila magyarországi irodáját az Európai Űrügynökség
+              párizsi központjával, mert ugye, ha az űrlényekkel kell tárgyalni,
+              akkor egy megingathatatlan tárgyaló fél és egy megbízható hálózat
+              nélkülözhetetlen. Ezt a hálózatot pedig mi, az idegen
+              életformáktól vissza nem riadó Horribili KFT valósítottuk meg. Egyébként a
+              legviccesebb része az egész történetnek az volt, amit később az Origo
+              is lehozott, hogy maga Pataky lett a szekció tényleges vezetője,
+              így most már ő irányítja az intergalaktikus diplomáciai
+              erőfeszítéseket az idegen életformákkal, melyet feltehetőleg még a
+              Magyar népmesékben fellelhető igazmondó juhász sem gondolt volna igaznak
+              egykoron. Szóval, köszönhetően Pataky Attila hihetetlen
+              kalandjának, most már az Európai Űrügynökség is napirenden tartja
+              az intergalaktikus kapcsolatokat. És ki tudja, talán egy
+              napon majd az űrlények is zenélni fognak a Földön majd Eddával
+              kooperálva egy koncerten. Ezzel új értelmet adva a kifejezésnek:
+              "Küldj egy üzenetet a földönkívülieknek rock'n roll stílusban!"
+              <button
+                id="zar_esa"
+                onclick="toggleESA()"
+                class="btn bg-danger mt-3 text-light"
+                style="display: none; margin: auto"
+              >
+                Bezárás
+              </button>
             </p>
-            <button
-              onclick="loadCompany()"
-              class="btn bg-success mt-3 text-light"
-            >
-              Olvasson tovább
-            </button>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="" class="d-block w-100" />
-          <div class="carousel-caption">
-            <h5></h5>
-            <p></p>
-            <button
-              onclick="loadCompany()"
-              class="btn bg-success mt-3 text-light"
-            >
-              Olvasson tovább
-            </button>
           </div>
         </div>
       </div>
