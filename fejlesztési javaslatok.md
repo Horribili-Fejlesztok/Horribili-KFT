@@ -1,3 +1,4 @@
+# ***Fejlesztés***:
 ## **img**: 
 #### A képeknek a forrását a következőképp kell megadni hogy kompatibilis legyen a github hostolással:
 
@@ -36,3 +37,19 @@ Ezt előnyödre is lehet használni, például a háttér így van kikapcsolva a
     <link rel="stylesheet" href="side_assets/company_assets/companystyle.css">
 </head>
 ```
+# ***Fontos fájlok***:
+## **index.html**
+#### MINDÍG INNEN INDÍTSD AZ OLDALAD
+
+Egyszerre több funkciót lát el, nélküle nem megy egyik oldal sem:
+1. Importálja a:
+    1. Boxicons-t
+    2. Bootstrapet
+    3. JQuery-t
+    4. style.css-t
+    5. main.js-t
+2. A fejlécet és láblécet tartalmazza
+3. A menüt tartalmazza
+4. Helyet biztosít a betöltendő oldalnak
+
+Az index.html mindíg be van töltve az oldalon, és ebbe töltődik be dinamikusan minden más oldal amit a menüből megnyithatunk
