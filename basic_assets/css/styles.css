@@ -195,8 +195,6 @@ img {
 .main {
   position: relative;
   transition: .4s;
-  /* Ez azért van bent, hogy a header ne takarja el a weboldal tetejét */
-  padding-top: var(--header-height);
 }
 
 .show-menu-border {
@@ -266,4 +264,9 @@ footer{
 
 .jumbotron > h1{
   font-size: min(11vw, 80px)
+}
+.main-bg-color {
+  background-color: var(--body-color);
+  /* Ez azért van bent, hogy a header ne takarja el a weboldal tetejét */
+  padding-top: var(--header-height);
 }
