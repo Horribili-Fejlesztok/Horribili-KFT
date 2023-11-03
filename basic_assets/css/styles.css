@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 /*=============== VARIABLES CSS ===============*/
 :root {
   --header-height: 3.5rem;
@@ -52,7 +53,9 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-color);
 }
 
@@ -70,7 +73,7 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.container_css{
+.container_css {
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -85,13 +88,24 @@ img {
 
 /*=============== HEADER Y NAV ===============*/
 .nav {
-  background-color: var(--container-color-dark);
-  padding-top: 1rem;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  transition: left 0.3s;
+  z-index: 99;
+}
+
+#close-menu {
+  display: none;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .nav__shape {
@@ -141,6 +155,7 @@ img {
   font-size: var(--small-font-size);
   font-weight: 500;
   margin-bottom: .25rem;
+  font-family: var(--body-font);
 }
 
 .nav__name {
@@ -152,6 +167,7 @@ img {
 .nav__list {
   display: flex;
   flex-direction: column;
+  /*A linkek közötti távolság*/
   row-gap: 1.5rem;
 }
 
@@ -163,6 +179,8 @@ img {
   font-size: var(--small-font-size);
   font-weight: 500;
   transition: .3s;
+  text-decoration: none;
+  font-family: var(--body-font);
 }
 
 .nav__link i {
@@ -171,14 +189,7 @@ img {
 
 .nav__link:hover {
   color: var(--title-color-dark);
-}
-
-.main {
-  position: relative;
-  background-color: var(--body-color);
-  transition: .4s;
-    /* Ez azért van bent, hogy a header ne takarja el a weboldal tetejét */
-  padding-top: var(--header-height);
+  text-decoration: none;
 }
 
 .show-menu-border {
@@ -201,7 +212,8 @@ img {
   align-items: center;
 }
 
-.header__logo, .header__toggle {
+.header__logo,
+.header__toggle {
   color: var(--title-color);
 }
 
@@ -213,6 +225,7 @@ img {
   font-size: 1.15rem;
   cursor: pointer;
 }
+
 .header-toggle-color {
   color: var(--header-toggle-color);
 }
@@ -227,149 +240,28 @@ img {
   color: var(--title-color-dark);
 }
 
-/*=============== BREAKPOINTS ===============*/
-@media screen and (min-width: 200px) {
-  .show-menu {
-    transform: translate(67%);
-  }
+footer{
+  z-index: var(--z-fixed)
 }
-@media screen and (min-width: 225px) {
-  .show-menu {
-    transform: translate(65%);
-  }
+
+.jumbotext {
+  font-size: 20px;
 }
-@media screen and (min-width: 250px) {
-  .show-menu {
-    transform: translate(63.5%);
-  }
+
+.jumbotron{
+  text-align: center;
+  padding-top: 30px;
+  background-color: rgb(255, 223, 223);
+  width: 100%;
+  margin-bottom: 50px;
+
 }
-@media screen and (min-width: 275px) {
-  .show-menu {
-    transform: translate(62%);
-  }
+
+.jumbotron > h1{
+  font-size: min(11vw, 80px)
 }
-@media screen and (min-width: 300px) {
-  .show-menu {
-    transform: translate(60.5%);
-  }
-}
-@media screen and (min-width: 325px) {
-  .show-menu {
-    transform: translate(58.5%);
-  }
-}
-@media screen and (min-width: 350px) {
-  .show-menu {
-    transform: translate(56%);
-  }
-}
-@media screen and (min-width: 375px) {
-  .show-menu {
-    transform: translate(54.5%);
-  }
-}
-@media screen and (min-width: 400px) {
-  .show-menu {
-    transform: translate(52.5%);
-  }
-}
-@media screen and (min-width: 425px) {
-  .show-menu {
-    transform: translate(50.5%);
-  }
-}
-@media screen and (min-width: 450px) {
-  .show-menu {
-    transform: translate(49%);
-  }
-}
-@media screen and (min-width: 475px) {
-  .show-menu {
-    transform: translate(47.5%);
-  }
-}
-@media screen and (min-width: 500px) {
-  .show-menu {
-    transform: translate(45%);
-  }
-}
-@media screen and (min-width: 525px) {
-  .show-menu {
-    transform: translate(42.5%);
-  }
-}
-@media screen and (min-width: 550px) {
-  .show-menu {
-    transform: translate(41.5%);
-  }
-}
-@media screen and (min-width: 575px) {
-  .show-menu {
-    transform: translate(39%);
-  }
-}
-@media screen and (min-width: 600px) {
-  .show-menu {
-    transform: translate(37%);
-  }
-}
-@media screen and (min-width: 625px) {
-  .show-menu {
-    transform: translate(36%);
-  }
-}
-@media screen and (min-width: 650px) {
-  .show-menu {
-    transform: translate(35%);
-  }
-}
-@media screen and (min-width: 675px) {
-  .show-menu {
-    transform: translate(34%);
-  }
-}
-@media screen and (min-width: 700px) {
-  .show-menu {
-    transform: translate(30%);
-  }
-}
-@media screen and (min-width: 800px) {
-  .show-menu {
-    transform: translate(28%);
-  }
-}
-@media screen and (min-width: 875px) {
-  .show-menu {
-    transform: translate(26%);
-  }
-}
-@media screen and (min-width: 1024px) {
-  .show-menu {
-    transform: translate(24%);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .show-menu {
-    transform: translate(20%);
-  }
-}
-@media screen and (min-width: 1400px) {
-  .show-menu {
-    transform: translate(17%);
-  }
-}
-@media screen and (min-width: 1600px) {
-  .show-menu {
-    transform: translate(15%);
-  }
-}
-@media screen and (min-width: 1800px) {
-  .show-menu {
-    transform: translate(13%);
-  }
-}
-@media screen and (min-width: 2000px) {
-  .show-menu {
-    transform: translate(12%);
-  }
+
+#content {
+  background-color: var(--body-color);
+  padding-top: var(--header-height);
 }
