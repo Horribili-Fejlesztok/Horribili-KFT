@@ -1,10 +1,11 @@
 $(document).ready(function () {
 
-    //MENU BUTTON (TOGGLE)
+    // ============ MENU BEHAVIOUR SECTION ============
+
+    // MENU BUTTON (TOGGLE)
 
     var $menu = $('#menu');
     var $menuToggle = $('#menu-toggle');
-    var $closeMenu = $('#close-menu');
 
     // Toggle the menu by adjusting the 'left' property (basically changing the position of the menu on and off screen)
     $menuToggle.click(function () {
@@ -18,11 +19,27 @@ $(document).ready(function () {
         }
     });
 
+    // MENU CLOSE
+
+    // Close the menu when clicking outside of it
+    $(document).on('click', function (e) {
+        if ($menu.css('left') === '0px' && !$(e.target).closest('#menu').length) {
+            $menu.css('left', '-250px');
+        }
+    });
+
+    // Prevent the menu from closing when clicking inside the menu
+    $menu.on('click', function (e) {
+        e.stopPropagation();
+    });
+
+    // ============ PAGE LOADING SECTION ============
+
     // PAGE LOADING (into the container)
 
+    // Loads the page given to it as a parameter (ex for parameter: team.html)
     function loadPage(pageToLoad) {
-        // loadPage function, loads the page given to it as a parameter (ex for parameter: team.html)
-
+        
         // First, store the page that was clicked as the last loaded page
         localStorage.setItem('lastLoadedPage', pageToLoad);
 
@@ -36,48 +53,37 @@ $(document).ready(function () {
     }
 
     // RESTORE SESSION
+
     // Load the last loaded page, if there is one
     var lastLoadedPage = localStorage.getItem('lastLoadedPage');
 
     // Check if there is a last loaded page, if yes load it
     if (lastLoadedPage) {
         loadPage(lastLoadedPage);
-
-        // If no, load the default page
+    // If no, load the default page
     } else {
         loadPage("start.html");
     }
 
+    // ============ PAGE LINK SECTION ============
+
     // LINKS HANDLING (Menu and other)
 
-    // Handle clicks on menu links
-    $("#menu ul li a").click(function (e) {
+    // Call loadPage with clicked link
+    function handleClick(e) {
         // Prevent the default link behavior
         e.preventDefault();
-        var clickedPage = $(this).attr("href");
-        loadPage(clickedPage);
-    });
-
-
-    // !!!IMPORTANT!!! give the class "pagelink" (class="pagelink") to any link
-    // that opens something that is related to the Horribli webpage
-    // I don't know what this voodoo is but it works. Thanks ChatGPT
-    $(document).on('click', '.pagelink', function (e) {
-        e.preventDefault();
+        // Store clicked page as var clickedPage
         var clickedPage = $(this).attr('href');
+        // Call "loadPage" with the "clickedPage" parameter
         loadPage(clickedPage);
-    });
+    }
+    
 
-    // MENU CLOSE
-    // Close the menu when clicking outside of it
-    $(document).on('click', function (e) {
-        if ($menu.css('left') === '0px' && !$(e.target).closest('#menu').length) {
-            $menu.css('left', '-250px');
-        }
-    });
+    // Handle clicks on menu links
+    $("#menu ul li a").click(handleClick);
 
-    // Prevent the menu from closing when clicking inside the menu
-    $menu.on('click', function (e) {
-        e.stopPropagation();
-    });
+    // !!!IMPORTANT!!! see fejlesztési javaslatok "linkek" section
+    // This is different because it needs to work with JQuery dynamically loaded pages
+    $(document).on('click', '.pagelink', handleClick);
 });
