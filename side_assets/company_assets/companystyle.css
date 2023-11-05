@@ -12,9 +12,11 @@ h4{
 
 .aboutus{
     margin: 20px;
-    padding-left: 2vw;
-    padding-right: 2vw;
     padding-bottom: 30px;
+}
+
+.aboutus p{
+    text-align: justify;
 }
 
 .card-text{
