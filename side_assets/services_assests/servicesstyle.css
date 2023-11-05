@@ -1,0 +1,105 @@
+.main{
+.card {
+    margin-bottom: 20px;
+}
+
+h4 {
+    text-align: center;
+    color: rgb(199, 33, 39);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.card-text {
+    text-align: justify;
+    color: #333;
+}
+
+.container-fluid {
+    width: 90%;
+}
+
+.card-img-top {
+    padding: 1%;
+    height: calc(10vw + 15rem);
+    width: 100%;
+    filter: brightness(0.75);
+    object-fit: cover;
+    margin: auto;
+    border: 10px;
+    overflow: hidden;
+    transition-duration: 500ms;
+}
+
+.card-img-top:active,
+.card-img-top:hover {
+    transition-duration: 500ms;
+    filter: brightness(1.0);
+    transform: scale(1.1);
+}
+
+.top-secret {
+    filter: blur(40px) brightness(0.3);
+    transition-duration: 500ms;
+}
+
+.top-secret:active,
+.top-secret:hover {
+    filter: blur(7px);
+    transition-duration: 500ms;
+}
+
+.btn-green {
+    background-color: #8CC83C;
+    color: white;
+}
+
+.btn-green:active,
+.btn-green:hover {
+    background-color: #a0e646;
+    color: white;
+}
+
+.characteristics {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.characteristic {
+    margin: auto;
+    text-align: center;
+    max-width: 400px;
+    padding-bottom: 20px;
+}
+
+.characteristic i {
+    font-size: min(40px, 6vw);
+    color: rgb(199, 33, 39);
+}
+
+.characteristic h3 {
+    color: rgb(199, 33, 39);
+
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.characteristic p {
+    font-size: 15px;
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+ul li {
+    text-indent: -1em;
+    padding-left: 1em;
+    color: #333;
+}
+}
