@@ -39,13 +39,13 @@ h4 {
 }
 
 .top-secret {
-    filter: blur(40px) brightness(0.3);
+    filter: blur(10px) brightness(0.5);
     transition-duration: 500ms;
 }
 
 .top-secret:active,
 .top-secret:hover {
-    filter: blur(7px);
+    filter: blur(0px);
     transition-duration: 500ms;
 }
 
