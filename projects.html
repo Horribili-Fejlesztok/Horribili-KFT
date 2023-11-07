@@ -60,7 +60,7 @@
             </h5>
             <button
               id="nyit_videki"
-              onclick="toggleVideki()"
+              onclick="toggleVideki();changePadding()"
               class="btn bg-success mt-3 text-light"
               style="display: block; margin: auto"
             >
@@ -90,7 +90,7 @@
             </p>
             <button
               id="zar_videki"
-              onclick="toggleVideki()"
+              onclick="toggleVideki();changeBackPadding()"
               class="btn bg-danger mt-3 text-light"
               style="display: none; margin: auto"
             >
@@ -114,7 +114,7 @@
             </h5>
             <button
               id="nyit_esa"
-              onclick="toggleESA()"
+              onclick="toggleESA();changePadding()"
               class="btn bg-success mt-3 text-light"
               style="display: block; margin: auto"
             >
@@ -126,7 +126,6 @@
                 display: none;
                 margin: auto;
                 text-align: justify;
-                font-size: 17.5px;
               "
             >
               Legnívósabb nagy hálózati projektünket az Európai Űrügynükségnek
@@ -158,7 +157,7 @@
               stílusban!"
               <button
                 id="zar_esa"
-                onclick="toggleESA()"
+                onclick="toggleESA();changeBackPadding()"
                 class="btn bg-danger mt-3 text-light"
                 style="display: none; margin: auto"
               >
@@ -181,7 +180,7 @@
             </h5>
             <button
               id="nyit_yoda"
-              onclick="toggleYoda()"
+              onclick="toggleYoda();changePadding()"
               class="btn bg-success mt-3 text-light"
               style="display: block; margin: auto"
             >
@@ -189,7 +188,11 @@
             </button>
             <p
               id="p_yoda"
-              style="display: none; margin: auto; text-align: justify"
+              style="
+                display: none;
+                margin: auto;
+                text-align: justify;
+              "
             >
               Miután az okos és bölcs Yoda 904 évesen távozott az élők
               világából, újabb misztikus kihívások elé állította magát, amelybe
@@ -220,7 +223,7 @@
               poénnal.
               <button
                 id="zar_yoda"
-                onclick="toggleYoda()"
+                onclick="toggleYoda();changeBackPadding()"
                 class="btn bg-danger mt-3 text-light"
                 style="display: none; margin: auto"
               >
