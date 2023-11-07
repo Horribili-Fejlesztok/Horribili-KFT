@@ -87,3 +87,12 @@ $(document).ready(function () {
     // This is different because it needs to work with JQuery dynamically loaded pages
     $(document).on('click', '.pagelink', handleClick);
 });
+
+function changePadding() {
+    const element = document.getElementById("content")
+    element.style.paddingTop = "3.5rem"
+  }
+function changeBackPadding() {
+    const element = document.getElementById("content")
+    element.style.paddingTop = "unset"
+  }
