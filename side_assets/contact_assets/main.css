@@ -1,0 +1,57 @@
+#content{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+body{
+    background-color: rgba(255,255,255,.8);
+}
+
+#contact{
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#images{
+    display: inline-flex;
+    
+}
+
+#parag{
+    display: inline-flex;
+}
+
+#kep{
+    border: 2px solid black;
+    margin-left: 10%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#gomb{
+    margin-left: 45%;
+}
+
+h6{
+    color: rgb(199, 33, 39);
+}
+
+b{
+    color: black;
+}
+
+#media{
+    padding-left: 20%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+a{
+    color: black;
+    padding-left: 20px;
+}
+
+#insta:hover{
+
+}
