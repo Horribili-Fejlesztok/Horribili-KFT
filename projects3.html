@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="side_assets/projects_assets/projects.css" />
+    <link rel="stylesheet" href="side_assets/projects_assets/background.css" />
+    <link
+      rel="stylesheet"
+      href="side_assets/projects_assets/bootstrap.min.css"
+    />
+    <script src="side_assets/projects_assets/bootstrap.bundle.min.js"></script>
+    <script src="side_assets/projects_assets/projects.js"></script>
+    <title>Sikertörténetünk</title>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div id="carouselExampleIndicators" class="carousel slide">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          aria-label="Slide1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          class="active"
+          aria-current="true"
+          aria-label="Slide3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div id="videki" class="carousel-item">
+          <img
+            src="side_assets/projects_assets/img/videki.jpg"
+            class="d-block w-100"
+            style="object-fit: cover"
+          />
+          <div class="carousel-caption">
+            <h5 style="font-size: 35px">
+              "NAV mentes kocsmatúra"<br />
+              <span style="font-size: 20px"
+                >avagy a Vidéki Robi Büfé hálózata</span
+              >
+            </h5>
+            <button
+              id="nyit_videki"
+              onclick="toggleVideki()"
+              class="btn bg-success mt-3 text-light"
+              style="display: block; margin: auto"
+            >
+              Olvasson tovább
+            </button>
+            <p
+              id="p_videki"
+              style="display: none; margin: auto; text-align: justify"
+            >
+              Az eddigi legkisebb hálózati projektünket Győrben, a Baross híd
+              melletti Vidéki Robi Büfének keszítettük el. A 2010-es évek végére
+              a büfének a rohamos számban növekvő alkoholisták számán túl az
+              egyre gyakorabban előforduló NAV-os túlkapásokkal is szembe
+              kellett néznie, ennek okán pedig a bisztró vezetése arra az
+              elhatározásra jutott, hogy változásra van szükség a város szívében
+              található népszerű kantin életében. Így 2018 nyarán némi EU-s pénz
+              bevonásával Robi, a tulajdonos belefogott a hely korszerűsítésébe.
+              Ezt a fejlesztést "NAV-mentes Kocsmatúra" néven emlegették a helyi
+              törzsvendégek. Ennek a tervnek a részeként valósítottuk meg a büfé
+              modernizált, NAV mentes és adócsaló rendszerrel ellátott hálózatát
+              mi, az adóellenőröket is elrettentő Horribili KFT. A projekt
+              végeztével kialakult egy olyan hely Győr szívében, ahol a
+              bürokrácia és a bodultsággal teli örömteli hangulat még a
+              természetben lévő szimbiózist is megszégyenítő módon egyesülni
+              tud. Ez az közeg ihlette meg a büfé legújabb, hamar nagy
+              népszerűségre szert tevő ételét, a "káosz-gulyást".
+            </p>
+            <button
+              id="zar_videki"
+              onclick="toggleVideki()"
+              class="btn bg-danger mt-3 text-light"
+              style="display: none; margin: auto"
+            >
+              Bezárás
+            </button>
+          </div>
+        </div>
+        <div id="esa" class="carousel-item">
+          <img
+            src="side_assets/projects_assets/img/esa.jpg"
+            class="d-block w-100"
+            style="object-fit: cover"
+          />
+          <div class="carousel-caption">
+            <h5 style="font-size: 35px">
+              "Pataky Attila Intergalaktikus Diplomáciai Központ"<br /><span
+                style="font-size: 20px"
+                >avagy az Európai Űrügynökség földönkívüliekkel foglalkozó
+                részlegének hálózata</span
+              >
+            </h5>
+            <button
+              id="nyit_esa"
+              onclick="toggleESA()"
+              class="btn bg-success mt-3 text-light"
+              style="display: block; margin: auto"
+            >
+              Olvasson tovább
+            </button>
+            <p
+              id="p_esa"
+              style="
+                display: none;
+                margin: auto;
+                text-align: justify;
+                font-size: 17.5px;
+              "
+            >
+              Legnívósabb nagy hálózati projektünket az Európai Űrügynükségnek
+              valósítottuk meg, amely mögött egy sci-fi filmbe illő történet
+              húzódik. 2010-ben az a hír járta körbe egész Európát, hogy Pataky
+              Attilát elrabolták az UFO-k, ez pedig az Eurúpai Űrügynökség
+              fantáziáját is megmozgatta. Arra az elhatározásra jutottak, hogy
+              egy teljesen új ágazat kialakításába fognak bele, melyet "Pataky
+              Attila Intergalaktikus Diplomáciai Központ" névvel ihlettek. A
+              tervbe a híres magyar rockzenészt is belevonták, aki átélte ezeket
+              az emberi elmével szinte felfoghatatlan eseményeket. Az új
+              ágazatnak egy olyan hálózatra volt szüksége, amely összeköti
+              Pataky Attila magyarországi irodáját az Európai Űrügynökség
+              párizsi központjával, mert ugye, ha az űrlényekkel kell tárgyalni,
+              akkor egy megingathatatlan tárgyaló fél és egy megbízható hálózat
+              nélkülözhetetlen. Ezt a hálózatot pedig mi, az idegen
+              életformáktól vissza nem riadó Horribili KFT valósítottuk meg.
+              Egyébként a legviccesebb része az egész történetnek az volt, amit
+              később az Origo is lehozott, hogy maga Pataky lett a szekció
+              tényleges vezetője, így most már ő irányítja az intergalaktikus
+              diplomáciai erőfeszítéseket az idegen életformákkal, melyet
+              feltehetőleg még a Magyar népmesékben fellelhető igazmondó juhász
+              sem gondolt volna igaznak egykoron. Szóval, köszönhetően Pataky
+              Attila hihetetlen kalandjának, most már az Európai Űrügynökség is
+              napirenden tartja az intergalaktikus kapcsolatokat. És ki tudja,
+              talán egy napon majd az űrlények is zenélni fognak a Földön az
+              Eddával kooperálva egy koncerten. Ezzel új értelmet adva a
+              kifejezésnek: "Küldj egy üzenetet a földönkívülieknek rock'n roll
+              stílusban!"
+              <button
+                id="zar_esa"
+                onclick="toggleESA()"
+                class="btn bg-danger mt-3 text-light"
+                style="display: none; margin: auto"
+              >
+                Bezárás
+              </button>
+            </p>
+          </div>
+        </div>
+        <div id="yoda" class="carousel-item active">
+          <img
+            src="side_assets/projects_assets/img/yoda.jpg"
+            class="d-block w-100"
+            style="object-fit: cover"
+          />
+          <div class="carousel-caption">
+            <h5 style="font-size: 35px">
+              "Yoda-fi" <br /><span style="font-size: 20px"
+                >avagy Yoda galaktikus hálózata</span
+              >
+            </h5>
+            <button
+              id="nyit_yoda"
+              onclick="toggleYoda()"
+              class="btn bg-success mt-3 text-light"
+              style="display: block; margin: auto"
+            >
+              Olvasson tovább
+            </button>
+            <p
+              id="p_yoda"
+              style="display: none; margin: auto; text-align: justify"
+            >
+              Miután az okos és bölcs Yoda 904 évesen távozott az élők
+              világából, újabb misztikus kihívások elé állította magát, amelybe
+              belevonta a mi hálózatépítő csapatunkat is. Mivel egy igazi Jedi
+              sosem hagyja el a kötelességeit, ezért még halála után is segíteni
+              akar a jövendőbeli Jedi Rend újraalakításában és a galaktikus béke
+              fenntartásában, így Yoda úgy döntött, hogy még az általunk
+              kiépített Pentagon hálózatát is túl szeretné szárnyalni minden
+              infrastruktúrális szempontot figyelembe véve. Az öreg Jedi úgy
+              határozott, hogy egy olyan galaktikus hálózatot kell csapatunknak
+              életre hívnia, amely lehetővé teszi számára, hogy erőszellemként
+              kommunikálni tudjon Jedi mesterjelöltjeivel és a jelenlegi
+              Jedikkel is. Ezt képzeljék csak el úgy, mint egy az erővel
+              felturbózott Wi-Fi jelet, amely a legmesszebbi galaxisokig is
+              elér. Már a projekt elején tudtuk, hogy nem elég csak egy földi
+              Wi-Fi jelszót adni bárkinek ahhoz, hogy bejelentkezhessen a
+              hálózatba és tudjon kommunikálni. Ehelyett egy bonyolult, erő- és
+              midiklorián-alapú rendszert fejlesztettünk ki, amely csak Yoda, a
+              Jedi mesterek és mesterjelöltek számára lett hozzáférhető. Mint
+              minden informatikai projekt, a Yoda-Fi (mint később elneveztük a
+              projektet) is komoly kihívások elé állított minket. De végül
+              sikerült létrehoznunk egy olyan hálózatot, amely segít Yodának a
+              túlvilágról irányítani és tanácsot adni a Jedi Rend tagjainak. Az
+              erőszellemek való kapcsolat nélkülözhetetlen eszköze lett a Jedi
+              Rend újjáépítésének, és most Yoda csak egy DHCP és erő
+              segítségével való IP cím lekérésnyire van attól, hogy segítsen
+              bármelyik fiatal Padavannak egy jó tanáccsal vagy egy zseniális
+              poénnal.
+              <button
+                id="zar_yoda"
+                onclick="toggleYoda()"
+                class="btn bg-danger mt-3 text-light"
+                style="display: none; margin: auto"
+              >
+                Bezárás
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Előző</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Következő</span>
+      </button>
+    </div>
+  </body>
+</html>
