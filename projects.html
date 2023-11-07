@@ -43,22 +43,21 @@
           data-bs-slide-to="2"
           aria-label="Slide3"
         ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="3"
-          aria-label="Slide4"
-        ></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div id="videki" class="carousel-item active">
           <img
             src="side_assets/projects_assets/img/videki.jpg"
             class="d-block w-100"
             style="object-fit: cover"
           />
           <div class="carousel-caption">
-            <h5>Vidéki Robi Büfé</h5>
+            <h5 style="font-size: 35px">
+              "NAV mentes kocsmatúra"<br />
+              <span style="font-size: 20px"
+                >avagy a Vidéki Robi Büfé hálózata</span
+              >
+            </h5>
             <button
               id="nyit_videki"
               onclick="toggleVideki()"
@@ -99,14 +98,20 @@
             </button>
           </div>
         </div>
-        <div class="carousel-item">
+        <div id="esa" class="carousel-item">
           <img
             src="side_assets/projects_assets/img/esa.jpg"
             class="d-block w-100"
             style="object-fit: cover"
           />
           <div class="carousel-caption">
-            <h5>Európai Űrügynükség</h5>
+            <h5 style="font-size: 35px">
+              "Pataky Attila Intergalaktikus Diplomáciai Központ"<br /><span
+                style="font-size: 20px"
+                >avagy az Európai Űrügynökség földönkívüliekkel foglalkozó
+                részlegének hálózata</span
+              >
+            </h5>
             <button
               id="nyit_esa"
               onclick="toggleESA()"
@@ -117,7 +122,12 @@
             </button>
             <p
               id="p_esa"
-              style="display: none; margin: auto; text-align: justify"
+              style="
+                display: none;
+                margin: auto;
+                text-align: justify;
+                font-size: 17.5px;
+              "
             >
               Legnívósabb nagy hálózati projektünket az Európai Űrügynükségnek
               valósítottuk meg, amely mögött egy sci-fi filmbe illő történet
@@ -142,13 +152,75 @@
               sem gondolt volna igaznak egykoron. Szóval, köszönhetően Pataky
               Attila hihetetlen kalandjának, most már az Európai Űrügynökség is
               napirenden tartja az intergalaktikus kapcsolatokat. És ki tudja,
-              talán egy napon majd az űrlények is zenélni fognak a Földön majd
+              talán egy napon majd az űrlények is zenélni fognak a Földön az
               Eddával kooperálva egy koncerten. Ezzel új értelmet adva a
               kifejezésnek: "Küldj egy üzenetet a földönkívülieknek rock'n roll
               stílusban!"
               <button
                 id="zar_esa"
                 onclick="toggleESA()"
+                class="btn bg-danger mt-3 text-light"
+                style="display: none; margin: auto"
+              >
+                Bezárás
+              </button>
+            </p>
+          </div>
+        </div>
+        <div id="yoda" class="carousel-item">
+          <img
+            src="side_assets/projects_assets/img/yoda.jpg"
+            class="d-block w-100"
+            style="object-fit: cover"
+          />
+          <div class="carousel-caption">
+            <h5 style="font-size: 35px">
+              "Yoda-fi" <br /><span style="font-size: 20px"
+                >avagy Yoda galaktikus hálózata</span
+              >
+            </h5>
+            <button
+              id="nyit_yoda"
+              onclick="toggleYoda()"
+              class="btn bg-success mt-3 text-light"
+              style="display: block; margin: auto"
+            >
+              Olvasson tovább
+            </button>
+            <p
+              id="p_yoda"
+              style="display: none; margin: auto; text-align: justify"
+            >
+              Miután az okos és bölcs Yoda 904 évesen távozott az élők
+              világából, újabb misztikus kihívások elé állította magát, amelybe
+              belevonta a mi hálózatépítő csapatunkat is. Mivel egy igazi Jedi
+              sosem hagyja el a kötelességeit, ezért még halála után is segíteni
+              akar a jövendőbeli Jedi Rend újraalakításában és a galaktikus béke
+              fenntartásában, így Yoda úgy döntött, hogy még az általunk
+              kiépített Pentagon hálózatát is túl szeretné szárnyalni minden
+              infrastruktúrális szempontot figyelembe véve. Az öreg Jedi úgy
+              határozott, hogy egy olyan galaktikus hálózatot kell csapatunknak
+              életre hívnia, amely lehetővé teszi számára, hogy erőszellemként
+              kommunikálni tudjon Jedi mesterjelöltjeivel és a jelenlegi
+              Jedikkel is. Ezt képzeljék csak el úgy, mint egy az erővel
+              felturbózott Wi-Fi jelet, amely a legmesszebbi galaxisokig is
+              elér. Már a projekt elején tudtuk, hogy nem elég csak egy földi
+              Wi-Fi jelszót adni bárkinek ahhoz, hogy bejelentkezhessen a
+              hálózatba és tudjon kommunikálni. Ehelyett egy bonyolult, erő- és
+              midiklorián-alapú rendszert fejlesztettünk ki, amely csak Yoda, a
+              Jedi mesterek és mesterjelöltek számára lett hozzáférhető. Mint
+              minden informatikai projekt, a Yoda-Fi (mint később elneveztük a
+              projektet) is komoly kihívások elé állított minket. De végül
+              sikerült létrehoznunk egy olyan hálózatot, amely segít Yodának a
+              túlvilágról irányítani és tanácsot adni a Jedi Rend tagjainak. Az
+              erőszellemek való kapcsolat nélkülözhetetlen eszköze lett a Jedi
+              Rend újjáépítésének, és most Yoda csak egy DHCP és erő
+              segítségével való IP cím lekérésnyire van attól, hogy segítsen
+              bármelyik fiatal Padavannak egy jó tanáccsal vagy egy zseniális
+              poénnal.
+              <button
+                id="zar_yoda"
+                onclick="toggleYoda()"
                 class="btn bg-danger mt-3 text-light"
                 style="display: none; margin: auto"
               >

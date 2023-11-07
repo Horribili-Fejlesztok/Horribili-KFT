@@ -26,3 +26,17 @@ function toggleESA() {
     nyit_esa.style.display = "block";
   }
 }
+function toggleYoda() {
+  var p_yoda = document.getElementById("p_yoda");
+  var nyit_yoda = document.getElementById("nyit_yoda");
+  var zar_yoda = document.getElementById("zar_yoda");
+  if (p_yoda.style.display === "none" || p_yoda.style.display === "") {
+    p_yoda.style.display = "block";
+    zar_yoda.style.display = "block";
+    nyit_yoda.style.display = "none"; 
+  } else {
+    p_yoda.style.display = "none";
+    zar_yoda.style.display = "none";
+    nyit_yoda.style.display = "block";
+  }
+}
