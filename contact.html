@@ -1,14 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>Cím</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="side_assets/contact_assets/main.css">
+	<title>Kapcsolat</title>
 </head>
+
 <body>
-    <img src="side_assets/contact_assets/map.jpg">
-    <h1 style="text-align: center; color: aquamarine;">Trello</h1>
-    <i class='bx bx-child bx-lg' style='color:#12dc52; display: block; margin-left: auto; margin-right: auto; width: 0%;'></i>
+	<div id="content">
+		<h1>Felkeresne minket?</h1>
+		<br>
+		<img id="kep" src="side_assets/contact_assets/cim.png" alt="Székhelyünk" title="Székhelyünk">
+		<br>
+		<br>
+		<img id="kep" src="side_assets/contact_assets/lokacio.png" alt="Helyszín" title="Helyszín">
+
+		<h6 style="text-align: justify;">Cégünk fontosnak tartja, hogy ügyfeleink mindig a megfelelő szolgáltatást kapják a nap 24 órájában, ezért
+			kérjük, ha bármi gondja van, nyugalommal forduljon hozzánk! Felkereshet az alábbi címen személyesen is:
+			<b>9024 Győr, Baross Gábor út 184</b>, mely könnyedén megközelíthető gyalog, busszal, és autóval is, vagy
+			vegye fel a kapcsolatot az alábbi kérdőív kitöltésével:
+		</h6>
+		<br>
+		<h1>Lépjen velünk kapcsolatba!</h1>
+		<br>
+		<div id="contact">
+			<form id="contact_form" name="contact_form" method="post" target="_blank">
+				<div class="mb-5 row">
+					<div class="col">
+						<label>Vezetéknév:</label>
+						<input type="text" required maxlength="50" class="form-control" id="first_name"
+							name="first_name" placeholder="Pl: Varga">
+					</div>
+					<div class="col">
+						<label>Keresztnév:</label>
+						<input type="text" required maxlength="50" class="form-control" id="last_name" name="last_name"
+							placeholder="Pl: Emánuel">
+					</div>
+				</div>
+				<div class="mb-5 row">
+					<div class="col">
+						<label for="email_addr">Email cím</label>
+						<input type="email" required maxlength="50" class="form-control" id="email_addr" name="email"
+							placeholder="emailcim@pelda.com">
+					</div>
+					<div class="col">
+						<label for="phone_input">Telefonszám</label>
+						<input type="tel" required maxlength="50" class="form-control" id="phone_input" name="Tel:"
+							placeholder="Tel:">
+					</div>
+				</div>
+				<div class="mb-5">
+					<label for="message">Megjegyzések:</label>
+					<textarea class="form-control" id="message" name="message" rows="5"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary px-4 btn-lg" id="gomb">Beküld</button>
+			</form>
+		</div>
+		<br>
+		<h6 style="text-align: center;">Továbbá elérhet minket az alábbi közösségi média oldalakon is:</h6>
+		<div class="row align-items-center" id="images">
+			<a href="https://twitter.com/horribili" target="_blank" class="col-4"><img
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAuRJREFUaEPtmu1NxDAMhn2TAJMAkwCTAJMAkwCTAJOAXhSjKDT1R5xL1Uv+nOBSJ49fx3bbO9CJjcOJ8dIE3rviU+Gp8M48MEN6Z4L+w5kKD1b4loguiegq7eMzfb4R0TsR4W/+n2urW1EYgPcZaA0G4HcV6PNkAw55rBnQAL+uLOLycnERQB+MhgD9nK7hqMAnYC/WbEnA8NpHMnTdGk4LG/HAshnAYX/5yB2xyC0B5xvCApHQCGNET9QQYbGQBIwNcQLB/EhoRE6pkBceQsDWGREhtBHui+dYAl7aFCcFPkOeTbaEcrleGdpIbHCAK6TXVFjLmJITIoHztZqTVhnSSyCqs1Nc+C15xPH9qrJsTwrpp3QmpPWxGM6MtjGIBlbBapKWJ5Oipr4IJSwaGLVX1YFJCsMp3mwKr9daQq9Nby76u04DDJUR2hElBA7AyEuddFw032s4fu1oJ/bKqhoYaY6YmXMDEjCU5fN4kxJYhNIShOX7UOD8rCEco0PRAlabq87QmpDWlqWIjXttoCpUbwdLo1JIoy8F9JaHqfGRgFvK0rGcpGEwlaXdZGjNGWbPRDcKUeqbzq8FGHO3mMDULSV72BT/6SEZEtkWarGp/nqBuS3Eo9TR4LjJ51ZVfUQsCqPpQLfFA3+PUtqlrvUMb6lEmWqvpZcuQ2ULJcrUSlo7raWzMRLaHcotSWtkiXIlqpaQzq+F0sfM1OYmYyk8LVm6lvrRkPBtY6+s3XRuoxRecoDmsa66ZqaJYbCeslTbLJTNlbZC1eaHwkYAczOCsxw9wmFbgAGIrqvXI5+QBGVJWgBBv8yDk1HvdrLlfZUqwtaydOTzaGkzaCjQLppvBiTDnk6Lf38BlaPLDl654scqLa9eTcyWOsxh3tpsMCTUVL0PMhEJky3ApSl2QK3p4DeJ+PzKaurRIXs2HpFidLHVonCXDfU2OoF7e3i0/anwaAV6rz8V7u3h0fanwqMV6L3+DyUohD2Rg7wxAAAAAElFTkSuQmCC" /></a>
+			<a href="https://www.instagram.com/horribilikft/" target="_blank" id="insta" class="col-4"><img
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA8JJREFUaEPtmmuKFTEQhc+sRF2JuglBFFRQ0FWom9A/ig9QdBU+NqKuRDnYgVBUcqo6fTuXmW4YZubePOpLPZPOBa7Yc3HFeHEAX3aNHxo+NHzJVmBLk74OoPxwma4NrNWfqu9vAOVnYMj/XUeBny8SvBiWRA9A6O8AfgB4r5v7LdYCE/ThotG1c4/0IzyhX2YHWQP8DcCt7EQnak+N386MnQVWsMXs+Hv0YTzgw8Utf3tjcq4b0ckywC1Y+i/9iqt9qqcEw5sAvHhB834UmTwKTH99ZwYkICfZQpsRWUsbwnPxrdYpiwxmUeBfZoK072SIAm096JBpR4A97dJn9tLsHQA0Zcr6E8CXyrep6fqRWo4A05QJXR45aEBD0SaE/Woa3wfwafnMyiYtLwJszXlP7b4C8MwAvwHwpKFladYKmL5C4PpRfXra43gPqgYsIUsq8/q9BvDUfPEWwOPlM0++rkKU8MyBtZ9Ik3GkLpC98rNAs3KqY8NdAJ/NmFywj9Vnf833LESaKVIB24AVzneLECxBM3W2VzLeW4qPErRqWE5j64NujMkCU/ho/aqqsp7pZyzpLIBbsMVcaSmlemrV5VFrspG6qxSlYWuSkZTUMuOWID0fj1jUVGAvalKrXChVa7eqJ9V3KrCdnH7ajZrGkb0FU6Y9FdimiIhJ2uBlXUIVE9OAvZpbxQgvUnta7lnJ2QArU+ylpUyqmQZsTXEE2I7Vc42zAV7jv0XrGYhMW3lMm8nDtm2mWrLmbXdovfw/DdhuNFR07flwZkMwDdiLrmvM2qvUetF+GjA1ZiePVllF29ZK+LkKflOBW6Ul86g6A2NfCm83E+qE5aTAERP1TFK9GsluOGr/nw7c0hSFrN8E8m9qs7U9jEb5TYFtuRjRMMEixzpbHQCkTlVVrWuDiAogNcRa6OiilrkyOVsWHjYIRc0sC158/EMguFnLsDl76NSSg9cDjhQT9Q2B+nbAyIu49DGyMmnvVDCzoe/56Rbf2RgjLTACnNm5bAGRGcMGLBljIsBejRwpJDKCr2nrVWXykDEC7B2uSdNZQ5DsY6Mzu0se2WARwju+YQCboenWC/FQOosCt6qnkk5GIm1EserKQ9jiosClevKuGtQC128C1WZBgao3E6V/KlVmgLcoGRVk9vsUbMjJHQlKyTjzYhrFCvmslT+rYVsyMjXw/kV9JSKrpUx7tc2UY40AW3j+X7Z6pXTsXSjrCVf7v7olICHrBlsBpyad2fgAnrn6e8x9aHiPVZ45x6Hhmau/x9z/AAbZHEzNm0XPAAAAAElFTkSuQmCC" /></a>
+			<a href="https://www.youtube.com/channel/UCXnw_6cUZtspT-LAmD5J0iQ" target="_blank" class="col-4"><img
+					src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAAh1JREFUaEPtmg1OBCEMhbsnUW+iN9GTqCdRT7J6EvUkmmeGBFkKNLS7lGESs26WAb6+FsrPgXb2HHbGSwt4dsWXwkvhySywXHoyQU9wlsJL4cks0OvS15s90s/YTFcCm30nZb+i79z/gupJlFo+EhHAbhNIUYOKhWGA8PdBRO/b92ITLQoD9Emxo5ZVoZ/PpQZqwC9EdG/ZQ4O6i9AlYIAC2OPzQESvuY6XgD+3mPUIjHi+kwBjcAKw5+cmN4hxCmMkPnqmJaKsW3PAnkZmTpfdAWPQAvS/h1MY7hwSDA3PRoIQsjGN+lrquCgwDItpLmRrLR3uLZMdqTmFtaekuB3M7fAea8WHAYZyAIbammGTegTCCFNTUwz/9PpTYzsAhuIWag8JHOxiFd8nIcvF8LkUTh1JO76HB9aObxfAiOegdO9QMjywdko7LPDFBy3LxCN2U8v5WDQtWQNrxikX58MAa8epCrD2amn4xYM2MBJ5y7w5p7JoeehxezaFzm7Xcqml5y3aAL47YGzTIpSalocz7FpmvXfWjfjsHAypS8BIDjBaWyzOexcFtffZ86XaYdq5koQagOR39pilprD1boQEorVs93Fp3FC86QY3H8HVEavhIPxN60C8ZN3cVYfYEJLrDnE73NWHcO0hvv7Qqv5fuVoMiyrzUHgBe1Cpp49L4R7reXh3KexBpZ4+LoV7rOfh3aWwB5V6+rg7hX8BUuRcPWrpxzgAAAAASUVORK5CYII=" /></a>
+		</div>
+
+
+
+
 </body>
+
 </html>
