@@ -14,13 +14,11 @@ body{
 }
 
 #images{
-    display: block;
-    margin-left: auto;
+    margin-left: 20%;
     margin-right: auto;
-}
-
-#parag{
-    display: inline-flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
 }
 
 #kep{
@@ -38,19 +36,19 @@ body{
 
 h6{
     color: rgb(199, 33, 39);
+    padding-top: 50px;
+    font-size: larger;
 }
 
 b{
     color: black;
 }
 
-#media{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-a{
+#content a{
     color: black;
     padding-left: 20px;
+}
+
+#images i{
+    margin: auto;
 }
