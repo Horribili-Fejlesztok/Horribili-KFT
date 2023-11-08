@@ -14,8 +14,9 @@ body{
 }
 
 #images{
-    display: inline-flex;
-    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #parag{
@@ -23,8 +24,10 @@ body{
 }
 
 #kep{
+    display: block;
     border: 2px solid black;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -42,9 +45,9 @@ b{
 }
 
 #media{
-    padding-left: 20%;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 a{
