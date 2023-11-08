@@ -14,17 +14,18 @@ body{
 }
 
 #images{
-    display: inline-flex;
+    margin-left: 20%;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
     
 }
 
-#parag{
-    display: inline-flex;
-}
-
 #kep{
+    display: block;
     border: 2px solid black;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -35,19 +36,19 @@ body{
 
 h6{
     color: rgb(199, 33, 39);
+    padding-top: 50px;
+    font-size: larger;
 }
 
 b{
     color: black;
 }
 
-#media{
-    padding-left: 20%;
-    padding-bottom: 50px;
-    padding-top: 50px;
-}
-
-a{
+#content a{
     color: black;
     padding-left: 20px;
+}
+
+#images i{
+    margin: auto;
 }
