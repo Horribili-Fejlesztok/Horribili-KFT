@@ -265,3 +265,11 @@ footer{
   background-color: var(--body-color);
   padding-top: var(--header-height);
 }
+
+.footer_links a{
+  color: white;
+  text-decoration: none;
+}
+.footer_links a:hover{
+  color: var(--header-color);
+}
