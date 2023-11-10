@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="side_assets/start_assets/background.css" />
   <link rel="stylesheet" href="side_assets/start_assets/bootstrap.min.css" />
   <script src="side_assets/start_assets/bootstrap.bundle.min.js"></script>
+  <script src="side_assets/start_assets/start.js"></script>
 </head>
 
 <body>
@@ -235,6 +236,8 @@
               <h3 class="card-title">NAV mentes kocsmatúra</h3>
               <a href="projects.html#carouselExampleIndicators" class="btn bg-success text-light pagelink">Tudjon meg
                 többet</a>
+              <a id="betekintes" onclick="showVideo()" href="#video" style="margin-top: 20px; display: block;" class="btn bg-dark text-light">Betekintés cégünk hibaelhárításába</a>
+              <a id="kitekintes" onclick="unshowVideo()" href="#video" style="margin-top: 20px; display: none;" class="btn bg-dark text-light">Videó bezárása</a>
             </div>
           </div>
         </div>
@@ -270,8 +273,11 @@
   <!-- Portfólió rész vége -->
 
   <!-- Videó rész eleje -->
-  <section>
-  <iframe style="margin: auto; align-items: center;" width="560" height="315" src="https://www.youtube.com/embed/1ndFQK8hZvc?si=PYyNouf_vShYI_U5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <section">
+  <div style="display: none;" id="video" class="video-container">
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ndFQK8hZvc?si=PYyNouf_vShYI_U5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+  <a id="kitekintes2" onclick="unshowVideo()" href="#video" style="margin: auto; display: none; font-weight: bold;" class="btn bg-success text-light">Videó bezárása</a>
   </section>
   <!-- Videó rész vége -->
 
