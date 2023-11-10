@@ -153,6 +153,9 @@ body {
 	height: 100%;
   }
 
+.unshow-video {
+	display: none;
+}
 .show-video {
 	display: flex;
 }

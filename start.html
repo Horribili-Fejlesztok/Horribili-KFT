@@ -236,7 +236,8 @@
               <h3 class="card-title">NAV mentes kocsmatúra</h3>
               <a href="projects.html#carouselExampleIndicators" class="btn bg-success text-light pagelink">Tudjon meg
                 többet</a>
-              <a onclick="showVideo" href="#video" style="margin-top: 20px;" class="btn bg-dark text-light">Betekintés cégünk hibaelhárításába</a>
+              <a id="betekintes" onclick="showVideo()" href="#video" style="margin-top: 20px; display: block;" class="btn bg-dark text-light">Betekintés cégünk hibaelhárításába</a>
+              <a id="kitekintes" onclick="unshowVideo()" href="#video" style="margin-top: 20px; display: none;" class="btn bg-dark text-light">Videó bezárása</a>
             </div>
           </div>
         </div>
@@ -273,9 +274,10 @@
 
   <!-- Videó rész eleje -->
   <section">
-  <div class="video-container show-video">
+  <div style="display: none;" id="video" class="video-container">
   <iframe class="responsive-iframe" src="https://www.youtube.com/embed/1ndFQK8hZvc?si=PYyNouf_vShYI_U5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
+  <a id="kitekintes2" onclick="unshowVideo()" href="#video" style="margin: auto; display: none; font-weight: bold;" class="btn bg-success text-light">Videó bezárása</a>
   </section>
   <!-- Videó rész vége -->
 
