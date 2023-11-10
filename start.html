@@ -1,398 +1,280 @@
 <!DOCTYPE html>
 <html lang="hu">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kezdőlap</title>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
-    />
-    <link rel="stylesheet" href="side_assets/start_assets/start.css" />
-    <link rel="stylesheet" href="side_assets/start_assets/background.css" />
-    <link rel="stylesheet" href="side_assets/start_assets/bootstrap.min.css" />
-    <script src="side_assets/start_assets/bootstrap.bundle.min.js"></script>
-  </head>
-  <body>
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-    <div
-      id="carouselExampleIndicators"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Tervezés"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="1"
-          aria-label="Kivitelezés"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Megvalósítás"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="3"
-          aria-label="Karbantartás"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            src="side_assets/start_assets/img/planning.jpg"
-            class="d-block w-100"
-            style="object-fit: cover"
-          />
-          <div class="carousel-caption">
-            <h5>Tervezés</h5>
-            <p>
-              Cégünk igényfelmérés után közösen a megrendelővel kezdi meg a
-              tervezést. Célunk, hogy ügyfeleinknek a lehető
-              legköltséghatékonyabb megoldás mellet a legjobb IT hálózati
-              megoldást nyújtsuk.
-            </p>
-            <a class="btn bg-success mt-3 text-light" href="#tervezes"
-              >Tudjon meg többet</a
-            >
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="side_assets/start_assets/img/execution.jpg"
-            class="d-block w-100"
-            style="object-fit: cover"
-          />
-          <div class="carousel-caption">
-            <h5>Esztétikus kivitelezés</h5>
-            <p>
-              Fontos számunkra, hogy az megépített hálózat a megbízhatóságon,
-              stabilitáson és gyorsaságon túl átlátható, rendezett, könnyen
-              kezelhető és időtálló legyen.
-            </p>
-            <a
-              class="btn bg-success mt-3 text-light"
-              href="#kivitelezes"
-              >Tudjon meg többet</a
-            >
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="side_assets/start_assets/img/aesthetic.jpg"
-            class="d-block w-100"
-            style="object-fit: cover"
-          />
-          <div class="carousel-caption">
-            <h5>Teljeskörű megvalósítás</h5>
-            <p>
-              Felmérés, tervezés, szerelési anyagok beszerzése, kiépítés,
-              tesztelés, mérési jegyzőkönyvek elkészítése, eszközök beszerzése,
-              beüzemelés, karbantartás, üzemeltetés.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img
-            src="side_assets/start_assets/img/maintenance.jpg"
-            class="d-block w-100"
-            style="object-fit: cover"
-          />
-          <div class="carousel-caption">
-            <h5>Karbantartás, üzemeltetés</h5>
-            <p>
-              Hálózat tesztelése, esetleges hibák javítása. Távmenedzsment
-              szolgáltatás. Szerviz csereeszközök biztosítása.
-            </p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Előző</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Következő</span>
-      </button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kezdőlap</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="side_assets/start_assets/start.css" />
+  <link rel="stylesheet" href="side_assets/start_assets/background.css" />
+  <link rel="stylesheet" href="side_assets/start_assets/bootstrap.min.css" />
+  <script src="side_assets/start_assets/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Tervezés"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Kivitelezés"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Megvalósítás"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Karbantartás"></button>
     </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="side_assets/start_assets/img/planning.jpg" class="d-block w-100" style="object-fit: cover" />
+        <div class="carousel-caption">
+          <h5>Tervezés</h5>
+          <p>
+            Cégünk igényfelmérés után közösen a megrendelővel kezdi meg a
+            tervezést. Célunk, hogy ügyfeleinknek a lehető
+            legköltséghatékonyabb megoldás mellet a legjobb IT hálózati
+            megoldást nyújtsuk.
+          </p>
+          <a class="btn bg-success mt-3 text-light" href="#tervezes">Tudjon meg többet</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="side_assets/start_assets/img/execution.jpg" class="d-block w-100" style="object-fit: cover" />
+        <div class="carousel-caption">
+          <h5>Esztétikus kivitelezés</h5>
+          <p>
+            Fontos számunkra, hogy az megépített hálózat a megbízhatóságon,
+            stabilitáson és gyorsaságon túl átlátható, rendezett, könnyen
+            kezelhető és időtálló legyen.
+          </p>
+          <a class="btn bg-success mt-3 text-light" href="#kivitelezes">Tudjon meg többet</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="side_assets/start_assets/img/aesthetic.jpg" class="d-block w-100" style="object-fit: cover" />
+        <div class="carousel-caption">
+          <h5>Teljeskörű megvalósítás</h5>
+          <p>
+            Felmérés, tervezés, szerelési anyagok beszerzése, kiépítés,
+            tesztelés, mérési jegyzőkönyvek elkészítése, eszközök beszerzése,
+            beüzemelés, karbantartás, üzemeltetés.
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="side_assets/start_assets/img/maintenance.jpg" class="d-block w-100" style="object-fit: cover" />
+        <div class="carousel-caption">
+          <h5>Karbantartás, üzemeltetés</h5>
+          <p>
+            Hálózat tesztelése, esetleges hibák javítása. Távmenedzsment
+            szolgáltatás. Szerviz csereeszközök biztosítása.
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Előző</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Következő</span>
+    </button>
+  </div>
 
-    <!-- Alap infók rész kezdete -->
-    <section id="about" class="about section-padding">
-      <div id="tervezes" class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-12 col-12">
-            <div class="about-img">
-              <img
-                src="side_assets/start_assets/img/about.jpg"
-                class="img-fluid"
-                style="border-radius: 20px"
-              />
+  <!-- Alap infók rész kezdete -->
+  <section id="about" class="about section-padding">
+    <div id="tervezes" class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="side_assets/start_assets/img/about.jpg" class="img-fluid" style="border-radius: 20px" />
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+          <div class="about-text">
+            <h2 style="padding-bottom: 20px; padding-top: 30px">
+              Hálózatépítés
+            </h2>
+            <p style="text-align: justify">
+              Cégünk vállalja
+              <b>egészen kis-és középvállalkozások hálózati infrastuktúrájának
+                kiépítését</b>. Megbízható működés, kellemes esztétikai kialakítás és könnyű
+              bővíthetőség? Segítünk Önnek!
+            </p>
+            <p id="kivitelezes" style="text-align: justify">
+              <b>Csaknem három évtizedes tapasztalattal</b> vállalunk
+              hálózatépítést, mely kiemelkedő kialakítással és teljesítménnyel
+              bír adatbiztonság és adatvédelem, gyorsaság tekintetében. A
+              kiépített hálózatot műszeres teszteléssel hitelesítjük.
+            </p>
+            <h2 style="padding-top: 50px; padding-bottom: 20px">
+              Szakszerű kivitelezés
+            </h2>
+            <p style="text-align: justify">
+              Kiemelt hangsúlyt fektetünk arra, hogy a
+              <b>magas műszaki tartalom mellett pontos, precíz kivitelezés</b>
+              valósuljon meg, mely nem csupán a hibátlan működéséről ismert,
+              hanem esztétikailag is megállja a helyét.
+            </p>
+            <p style="text-align: justify">
+              A kábelcsatornázások kialakításánál
+              <b>figyelembe vesszük a hely adottságait</b>, a kevésbé
+              esztétikus kábeleket kötegeljük.
+            </p>
+            <p style="text-align: justify">
+              Fontosnak tartjuk, hogy az
+              <b>általunk kialakított hálózatok könnyen bővíthetőek</b>
+              legyenek, mely elősegíti a könnyű munkát a céges létszámbővülés
+              esetén.
+            </p>
+            <a id="szolgaltatasok" class="pagelink btn bg-success mt-3 text-light" href="company.html">Tudjon meg
+              többet</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Alap infók rész vége -->
+
+  <!-- Szolgáltatások rész kezdete -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h2>Szolgáltatások</h2>
+            <p>
+              Itt láthatóak a cégünk által kínált választható, egyénileg
+              testreszabható szolgáltatási csomagok
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-12 col-md-12 col-lg-5">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <img src="side_assets/services_assests/small/smallnetwork.png" style="width: 100%" />
+              <h3 class="card-title" style="padding-top: 30px; padding-bottom: 10px; color: white">
+                Kis hálozat
+              </h3>
+              <p class="lead">
+                <a class="pagelink btn bg-success text-light" href="services.html#smallnetwork">További információk</a>
+              </p>
             </div>
           </div>
-          <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-            <div class="about-text">
-              <h2 style="padding-bottom: 20px; padding-top: 30px">
-                Hálózatépítés
-              </h2>
-              <p style="text-align: justify">
-                Cégünk vállalja
-                <b
-                  >egészen kis-és középvállalkozások hálózati infrastuktúrájának
-                  kiépítését</b
-                >. Megbízható működés, kellemes esztétikai kialakítás és könnyű
-                bővíthetőség? Segítünk Önnek!
-              </p>
-              <p id="kivitelezes" style="text-align: justify">
-                <b>Csaknem három évtizedes tapasztalattal</b> vállalunk
-                hálózatépítést, mely kiemelkedő kialakítással és teljesítménnyel
-                bír adatbiztonság és adatvédelem, gyorsaság tekintetében. A
-                kiépített hálózatot műszeres teszteléssel hitelesítjük.
-              </p>
-              <h2
-                
-                style="padding-top: 50px; padding-bottom: 20px"
-              >
-                Szakszerű kivitelezés
-              </h2>
-              <p style="text-align: justify">
-                Kiemelt hangsúlyt fektetünk arra, hogy a
-                <b>magas műszaki tartalom mellett pontos, precíz kivitelezés</b>
-                valósuljon meg, mely nem csupán a hibátlan működéséről ismert,
-                hanem esztétikailag is megállja a helyét.
-              </p>
-              <p style="text-align: justify">
-                A kábelcsatornázások kialakításánál
-                <b>figyelembe vesszük a hely adottságait</b>, a kevésbé
-                esztétikus kábeleket kötegeljük.
-              </p>
-              <p style="text-align: justify">
-                Fontosnak tartjuk, hogy az
-                <b>általunk kialakított hálózatok könnyen bővíthetőek</b>
-                legyenek, mely elősegíti a könnyű munkát a céges létszámbővülés
-                esetén.
-              </p>
-              <a id="szolgaltatasok"
-                class="pagelink btn bg-success mt-3 text-light"
-                href="company.html"
-                >Tudjon meg többet</a
-              >
+        </div>
+        <div class="col-sm-12 col-12 col-md-12 col-lg-7">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <img src="side_assets/services_assests/medium/mediumnetwork2.png" style="width: 100%" />
+              <h3 class="card-title" style="padding-top: 30px; padding-bottom: 10px; color: white">
+                Közepes hálózat
+              </h3>
+              <a class="pagelink btn bg-success text-light" href="services.html#mediumnetwork">További információk</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Alap infók rész vége -->
-
-    <!-- Szolgáltatások rész kezdete -->
-    <section class="services section-padding" id="services">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-header text-center pb-5">
-              <h2>Szolgáltatások</h2>
-              <p>
-                Itt láthatóak a cégünk által kínált választható, egyénileg
-                testreszabható szolgáltatási csomagok
+      <div class="row" style="padding-top: 20px">
+        <div class="col-sm-12 col-12 col-md-12 col-lg-7" style="margin: auto">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <img src="side_assets/services_assests/large/largenetwork.png" style="width: 100%" />
+              <h3 class="card-title" style="padding-top: 30px; padding-bottom: 10px; color: white">
+                Nagy hálózat
+              </h3>
+              <p class="lead">
+                <a class="pagelink btn bg-success text-light" href="services.html#largenetwork">További információk</a>
               </p>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-sm-12 col-12 col-md-12 col-lg-5">
-            <div class="card text-white text-center bg-dark pb-2">
-              <div class="card-body">
-                <img
-                  src="side_assets/services_assests/small/smallnetwork.png"
-                  style="width: 100%"
-                />
-                <h3
-                  class="card-title"
-                  style="padding-top: 30px; padding-bottom: 10px; color: white"
-                >
-                  Kis hálozat
-                </h3>
-                <p class="lead">
-                  <a
-                    class="pagelink btn bg-success text-light"
-                    href="services.html#smallnetwork"
-                    >További információk</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-12 col-md-12 col-lg-7">
-            <div class="card text-white text-center bg-dark pb-2">
-              <div class="card-body">
-                <img
-                  src="side_assets/services_assests/medium/mediumnetwork2.png"
-                  style="width: 100%"
-                />
-                <h3
-                  class="card-title"
-                  style="padding-top: 30px; padding-bottom: 10px; color: white"
-                >
-                  Közepes hálózat
-                </h3>
-                <a
-                  class="pagelink btn bg-success text-light"
-                  href="services.html#mediumnetwork"
-                  >További információk</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row" style="padding-top: 20px">
-          <div class="col-sm-12 col-12 col-md-12 col-lg-7" style="margin: auto">
-            <div class="card text-white text-center bg-dark pb-2">
-              <div class="card-body">
-                <img
-                  src="side_assets/services_assests/large/largenetwork.png"
-                  style="width: 100%"
-                />
-                <h3
-                  class="card-title"
-                  style="padding-top: 30px; padding-bottom: 10px; color: white"
-                >
-                  Nagy hálózat
-                </h3>
-                <p class="lead">
-                  <a
-                    class="pagelink btn bg-success text-light"
-                    href="services.html#largenetwork"
-                    >További információk</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-12 col-12 col-md-12 col-lg-5" style="margin: auto">
-            <div class="card text-white text-center bg-dark pb-2">
-              <div class="card-body">
-                <img
-                  src="side_assets/services_assests/pentagon/pentagon.png"
-                  style="width: 100%"
-                />
-                <h3
-                  class="card-title"
-                  style="padding-top: 30px; padding-bottom: 10px; color: white"
-                >
-                  Pentagon méretű hálózat
-                </h3>
-                <p class="lead">
-                  <a
-                    class="pagelink btn bg-success text-light"
-                    href="services.html#pentagon"
-                    >További információk</a
-                  >
-                </p>
-              </div>
+        <div class="col-sm-12 col-12 col-md-12 col-lg-5" style="margin: auto">
+          <div class="card text-white text-center bg-dark pb-2">
+            <div class="card-body">
+              <img src="side_assets/services_assests/pentagon/pentagon.png" style="width: 100%" />
+              <h3 class="card-title" style="padding-top: 30px; padding-bottom: 10px; color: white">
+                Pentagon méretű hálózat
+              </h3>
+              <p class="lead">
+                <a class="pagelink btn bg-success text-light" href="services.html#pentagon">További információk</a>
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Szolgáltatások rész vége -->
+    </div>
+  </section>
+  <!-- Szolgáltatások rész vége -->
 
-    <!-- Portfólió rész kezdete -->
-    <section id="portfolio" class="portfolio section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-header text-center pb-5">
-              <h2>Sikertörténeteink</h2>
-              <p>Itt láthatók az eddigi legkomolyabb projektjeink</p>
+  <!-- Portfólió rész kezdete -->
+  <section id="portfolio" class="portfolio section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h2>Sikertörténeteink</h2>
+            <p>Itt láthatók az eddigi legkomolyabb projektjeink</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-light text-center bg-white pb-2">
+            <div class="card-body text-light">
+              <div class="img-area mb-4">
+                <img style="object-fit: cover" src="side_assets/projects_assets/img/videki.jpg" class="img-fluid" />
+              </div>
+              <h3 class="card-title">NAV mentes kocsmatúra</h3>
+              <a href="projects.html#carouselExampleIndicators" class="btn bg-success text-light pagelink">Tudjon meg
+                többet</a>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12 col-md-12 col-lg-4">
-            <div class="card text-light text-center bg-white pb-2">
-              <div class="card-body text-light">
-                <div class="img-area mb-4">
-                  <img
-                    style="object-fit: cover"
-                    src="side_assets/projects_assets/img/videki.jpg"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="card-title">NAV mentes kocsmatúra</h3>
-                <a
-                  href="projects.html#carouselExampleIndicators"
-                  class="btn bg-success text-light pagelink"
-                  >Tudjon meg többet</a
-                >
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-light text-center bg-white pb-2">
+            <div class="card-body text-light">
+              <div class="img-area mb-4">
+                <img style="object-fit: cover" src="side_assets/projects_assets/img/esa.jpg" class="img-fluid" />
               </div>
+              <h3 class="card-title">
+                Pataky Attila Intergalaktikus Diplomáciai Központ
+              </h3>
+              <a href="projects.html#carouselExampleIndicators" class="btn bg-success text-light pagelink">Tudjon meg
+                többet</a>
             </div>
           </div>
-          <div class="col-12 col-md-12 col-lg-4">
-            <div class="card text-light text-center bg-white pb-2">
-              <div class="card-body text-light">
-                <div class="img-area mb-4">
-                  <img
-                    style="object-fit: cover"
-                    src="side_assets/projects_assets/img/esa.jpg"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="card-title">
-                  Pataky Attila Intergalaktikus Diplomáciai Központ
-                </h3>
-                <a
-                  href="projects.html#carouselExampleIndicators"
-                  class="btn bg-success text-light pagelink"
-                  >Tudjon meg többet</a
-                >
+        </div>
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-light text-center bg-white pb-2">
+            <div class="card-body text-light">
+              <div class="img-area mb-4">
+                <img style="object-fit: cover" src="side_assets/projects_assets/img/yoda.jpg" class="img-fluid" />
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-12 col-lg-4">
-            <div class="card text-light text-center bg-white pb-2">
-              <div class="card-body text-light">
-                <div class="img-area mb-4">
-                  <img
-                    style="object-fit: cover"
-                    src="side_assets/projects_assets/img/yoda.jpg"
-                    class="img-fluid"
-                  />
-                </div>
-                <h3 class="card-title">Yoda-fi</h3>
-                <a
-                  href="projects.html#carouselExampleIndicators"
-                  class="btn bg-success text-light pagelink"
-                  >Tudjon meg többet</a
-                >
-              </div>
+              <h3 class="card-title">Yoda-fi</h3>
+              <a href="projects.html#carouselExampleIndicators" class="btn bg-success text-light pagelink">Tudjon meg
+                többet</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <!-- Portfólió rész vége -->
-  </body>
+    </div>
+  </section>
+  <!-- Portfólió rész vége -->
+
+  <!-- Videó rész eleje -->
+  <section>
+  <iframe style="margin: auto; align-items: center;" width="560" height="315" src="https://www.youtube.com/embed/1ndFQK8hZvc?si=PYyNouf_vShYI_U5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
+  <!-- Videó rész vége -->
+
+</body>
+
 </html>
