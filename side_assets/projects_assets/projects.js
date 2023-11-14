@@ -40,3 +40,5 @@ function toggleYoda() {
     nyit_yoda.style.display = "block";
   }
 }
+
+// Sikeres tesztelés - KÉSZ oldal
