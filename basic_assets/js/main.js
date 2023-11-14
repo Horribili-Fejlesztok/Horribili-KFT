@@ -97,4 +97,5 @@ function changeBackPadding() {
     element.style.paddingTop = "unset"
   }
 
-// Sikeres tesztelés - KÉSZ oldal
+
+  // Sikeres tesztelés - KÉSZ oldal
