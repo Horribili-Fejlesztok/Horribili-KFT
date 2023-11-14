@@ -21,3 +21,6 @@ function unshowVideo() {
     kitekintes2.style.display = "none"
     teljes2.style.display = "none"
 }
+
+
+// Sikeres tesztelés - FINISHED

@@ -96,3 +96,6 @@ function changeBackPadding() {
     const element = document.getElementById("content")
     element.style.paddingTop = "unset"
   }
+
+
+  // Sikeres tesztelés - KÉSZ oldal
